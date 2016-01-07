@@ -1,0 +1,87 @@
+@charset "utf-8";
+.container article .box.span12 form {
+	background-color: #9FC;
+	height: auto;
+	width: 100%;
+}
+.container article .box.span12 form .box-header {
+	height: 30px;
+	width: 100%;
+	background-color: #eee;	
+}
+.container article .box.span12 form .box-header .glyphicon {
+	font-size:17px;
+	margin-left:30%;
+	margin-top:15%;
+	color:#000;
+}
+.container article .box.span12 form .box-header .glyphicon.glyphicon-pencil {
+	float: left;
+	margin-left:10px;
+	margin-top:2px;
+	margin-right:1px;
+	border-right-width: thin;
+	border-right-style: solid;
+	border-right-color: #FFF;
+	
+}
+
+.container article .box.span12 form .box-header .glyphicon.glyphicon-chevron-up,.container article .box.span12 form .box-header .glyphicon.glyphicon-wrench,.container article .box.span12 form .box-header .glyphicon.glyphicon-remove{
+	width: 100%;	
+	
+}
+.container article .box.span12 form .box-header .btn-setting,
+.container article .box.span12 form .box-header .btn-close,
+.container article .box.span12 form .box-header .btn-minimize {
+	float: right;
+	height: 30px;
+	width: 4%;
+	border-left-width: thin;
+	border-left-style: solid;
+	border-left-color: #FFF;
+}
+
+.container article .box.span12 form #textarea {
+	height: 200px;
+	width: 100%;
+	float: left;
+	margin-top: 20px;
+}
+
+.container article .box.span12 #input {
+	height: 100px;
+	width: 60%;
+	margin-top: 5px;
+	float: left;
+	clear: right;
+	border: thin solid #F03;
+
+	
+}
+.container article .box.span12 form #input #textarea {
+	float: left;
+	height: 50px;
+	margin-right:20%;
+}
+
+.container article .box.span12 form #input p {
+	width: 15%;
+	float: left;
+		
+}
+
+.container article .box.span12 form .tx {
+	float: left;
+	height: 30px;
+	width: 30%;
+	margin-right:20%;
+	
+}
+.container article .box.span12 form  #imgMain {
+	float: right;
+	clear: left;
+	width:20%;
+	height:200px;
+	border: thin solid #000;
+	background-color: #C03;
+}

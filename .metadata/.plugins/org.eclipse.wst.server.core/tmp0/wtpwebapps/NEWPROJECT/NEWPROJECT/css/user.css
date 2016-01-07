@@ -1,0 +1,403 @@
+@charset "utf-8";
+p {
+	margin: auto;
+}
+#container {
+	background-color: #0F0;
+	width: 1000px;
+	margin-top: -10px;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	height: auto;
+	overflow: auto;
+}
+#container #header #logo {
+	background-color: #CFF;
+	padding: 0px;
+	clear: right;
+	float: left;
+	height: 100px;
+	width: 320px;
+	margin-right: 5px;
+}
+#container #header #logo img {
+		height: 100px;
+	width: 320px;
+}
+#container #header div #login {
+	background-color: #FFF;
+	height: 30px;
+	width: 110px;
+	clear: none;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 20px;
+	text-align: center;
+	border-top-color: #FF6;
+	border-right-color: #FF6;
+	border-bottom-color: #FF6;
+	border-left-color: #FF6;
+	overflow: auto;
+	float: right;
+	margin-left: 5px;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	margin-right: 20px;
+}
+#container #header div #dk {
+		background-color: #FFF;
+	height: 30px;
+	width: 100px;
+	clear: none;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 20px;
+	text-align: center;
+	border-top-color: #FF6;
+	border-right-color: #FF6;
+	border-bottom-color: #FF6;
+	border-left-color: #FF6;
+	overflow: auto;
+	float: right;
+	margin-left: 5px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 0px;
+}
+#container #header {
+	background-color: #0FF;
+	height: 100px;
+}
+
+
+#container #menu {
+	background-color: #C6C;
+	margin-top: 10px;
+	height: 50px;
+}
+#container #tittle1 {
+	height: auto;
+	margin-top: 10px;
+	width: 990px;
+	border-bottom-color: #F33;
+	overflow: auto;
+}
+
+
+
+#container #tittle1 #TabbedPanels2 .TabbedPanelsTabGroup #datTour {
+	background-color: #FFF;
+	float: left;
+	height: 500px;
+	width: 985px;
+	margin-left: 5px;
+	clear: both;
+}
+#container #tittle1 #TabbedPanels2 .TabbedPanelsTabGroup #datTour .headerttkh {
+	color: #FF0;
+	background-color: #3C0;
+	text-align: center;
+	border-bottom-width: thin;
+	border-bottom-style: solid;
+	border-bottom-color: #999;
+}
+#container #tittle1 #TabbedPanels2 .TabbedPanelsTabGroup #datTour #thongtinkhachang {
+	height: 350px;
+	width: 300px;
+	margin-top: 10px;
+	margin-left: 10px;
+	color: #000;
+	background-color: #3CF;
+	float: left;
+	clear: both;
+}
+#container #tittle1 #TabbedPanels2 .TabbedPanelsTabGroup #datTour #thongtinkhachang #formmini {
+	height: auto;
+	width: 300;
+	background-color: #3CF;
+}
+#container #tittle1 #TabbedPanels2 .TabbedPanelsTabGroup #datTour #yeucaudattour {
+	float: left;
+	height: 300px;
+	width: 300px;
+	margin-top: 10px;
+	margin-left: 5px;
+	background-color: #3C6;
+}
+
+
+
+#container #tittle1 #TabbedPanels2 .TabbedPanelsTabGroup #datTour #thongtinkhachang #formmini .form {
+	margin-top: 10px;
+	width: 300px;
+	height: 30px;
+	float: left;
+	clear: both;
+	text-align: right;
+	margin-right: 10px;
+	border-radius: 10px, 10px, 10px, 10px;
+	background-color: #3CF;
+}
+#container #tittle1 #TabbedPanels2 .TabbedPanelsTabGroup #datTour #thongtinkhachang #formmini .form  p label {
+	float:right;
+	margin-right:15px;
+}
+
+#container #tittle1 #TabbedPanels2 .TabbedPanelsTabGroup #datTour #thongtinkhachang #formmini .form  p input {
+	float:right;
+	margin-right:4px;
+	border-radius:5, 5 , 5 , 5;
+	
+
+}
+#container #tittle1 #TabbedPanels2 .TabbedPanelsTabGroup #datTour #thongtinkhachang #formmini #gioitinh #radio1  {
+	float: right;
+	margin-right: 40px;
+	width: 60px;
+}
+#container #tittle1 #TabbedPanels2 .TabbedPanelsTabGroup #datTour #thongtinkhachang #formmini #gioitinh #radio2 {
+	float: right;
+	width: 50px;
+	margin-right: 20px;
+	margin-left: 23px;
+}
+#container #tittle1 #TabbedPanels2 .TabbedPanelsTabGroup #datTour #thongtintour {
+	background-color: #FC0;
+	float: left;
+	height: 400px;
+	width: 350px;
+	margin-left: 5px;
+	margin-top: 10px;
+}
+#container #tittle1 #TabbedPanels2 .TabbedPanelsTabGroup #datTour #thongtintour #pictour {
+	clear: none;
+	float: none;
+	height: 200px;
+	width: 305px;
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	background-image: none;
+}
+
+
+
+#container #list2 {
+	background-color: #CCC;
+	overflow: auto;
+	height: auto;
+	margin-top: 10px;
+	width: 740px;
+}
+#container #list2 #info4 {
+	background-color: #FFF;
+	clear: right;
+	float: left;
+	height: 250px;
+	width: 455px;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+#container #list2 #infoTour1 {
+	background-color: #FFF;
+	height: 100px;
+	margin-left: 5px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	width: 715px;
+}
+#container #list2 #pic1 {
+	clear: none;
+	float: left;
+	height: 250px;
+	width: 725px;
+	margin-top: 10px;
+	margin-left: 5px;
+	background-color: #FFF;
+}
+#container #list2 #pic2 {
+	clear: none;
+	float: left;
+	height: 250px;
+	width: 260px;
+	margin-top: 5px;
+	margin-left: 10px;
+	background-color: #FFF;
+}
+
+#container #list2 #pic3 {
+	clear: none;
+	float: left;
+	height: 250px;
+	width: 450px;
+	margin-top: 5px;
+	margin-left: 10px;
+	background-color: #FFF;
+}
+
+#container #list2 #info13 {
+	clear: none;
+	float: left;
+	height: 150px;
+	width: 725px;
+	margin-top: 10px;
+	margin-left: 5px;
+	background-color: #FFF;
+}
+#container #list2 #pic4 {
+	clear: none;
+	float: left;
+	height: 250px;
+	width: 450px;
+	margin-top: 10px;
+	margin-left: 5px;
+	background-color: #FFF;
+}
+#container #list2 #pic5 {
+	clear: none;
+	float: left;
+	height: 250px;
+	width: 265px;
+	margin-top: 10px;
+	margin-left: 10px;
+	background-color: #FFF;
+}
+#container #list2 #pic6 {
+	clear: none;
+	float: left;
+	height: 250px;
+	width: 260px;
+	margin-top: 5px;
+	margin-left: 10px;
+	background-color: #FFF;
+}
+#container #list2 #pic7 {
+	clear: none;
+	float: left;
+	height: 250px;
+	width: 450px;
+	margin-top: 5px;
+	margin-left: 10px;
+	background-color: #FFF;
+}
+
+#container #tittle3 {
+
+	background-color: #FFF;
+	height: 20px;
+	margin-top: 10px;
+	width: 660px;
+}
+#container #list3 {
+	background-color: #CCC;
+	overflow: auto;
+	height: auto;
+	margin-top: 10px;
+	width: 740px;
+}
+#container #list3 #infoTour3 {
+	clear: none;
+	float: left;
+	height: 150px;
+	width: 725px;
+	margin-top: 10px;
+	margin-left: 5px;
+	background-color: #FFF;
+	
+}
+#container #list3 #info9 {
+		clear: none;
+	float: left;
+	height: 200px;
+	width: 200px;
+	margin-top: 5px;
+	margin-left: 15px;
+	background-color: #FFF;
+}
+#container #list3 #pic8 {
+	background-color: #FFF;
+	clear: right;
+	float: left;
+	height: 250px;
+	width: 350px;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+#container #list3 #pic9 {
+	clear: none;
+	float: left;
+	height: 230px;
+	width: 350px;
+	margin-top: 15px;
+	margin-left: 15px;
+	background-color: #FFF;
+}
+#container #tittle4 {
+	height: 20px;
+	width: 730px;
+	margin-top: 5px;
+	padding-left: 5px;
+}
+#container #tittle5 {
+	background-color: #FFF;
+	height: 20px;
+	margin-top: 10px;
+	width: 660px;
+	
+}
+#container #list4 {
+	background-color: #CCC;
+	overflow: auto;
+	height: auto;
+	margin-top: 10px;
+	width: 740px;
+}
+#container #list6 {
+	background-color: #CCC;
+	height: auto;
+	margin-top: 10px;
+	width: 740px;
+}
+#container #list4 #infoTour4 {
+	clear: none;
+	float: left;
+	height: 150px;
+	width: 725px;
+	margin-top: 10px;
+	margin-left: 5px;
+	background-color: #FFF;
+}
+#container #list4 #pic10 {
+	clear: none;
+	float: left;
+	height: 150px;
+	width: 700px;
+	margin-top: 10px;
+	margin-left: 20px;
+	background-color: #FFF;
+}
+#container #list4 #pic11  {
+	clear: none;
+	float: left;
+	height: 150px;
+	width: 700px;
+	margin-top: 10px;
+	margin-left: 15px;
+	background-color: #FFF;
+}
+#container #list4 #infoTour5 {
+	clear: none;
+	float: left;
+	height: 150px;
+	width: 715px;
+	margin-top: 10px;
+	margin-left: 10px;
+	background-color: #FFF;
+}
+#container #footdeader {
+	background-color: #F60;
+	height: 100px;
+	width: 1000px;
+}

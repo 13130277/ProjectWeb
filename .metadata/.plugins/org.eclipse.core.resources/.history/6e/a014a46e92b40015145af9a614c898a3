@@ -1,0 +1,13 @@
+package DAO;
+
+import java.util.ArrayList;
+
+import Model.Tour;
+
+public interface TourDao {
+	public boolean deleteTour();
+	public void deleteAllTour();
+	public Tour getTour();
+	public ArrayList<Tour> getAllTour();
+
+}

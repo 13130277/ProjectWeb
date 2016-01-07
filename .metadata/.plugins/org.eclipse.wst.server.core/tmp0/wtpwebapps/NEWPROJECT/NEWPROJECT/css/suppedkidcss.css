@@ -1,0 +1,77 @@
+@charset "utf-8";
+p {
+		text-align: justify;
+	margin: auto;
+}
+#container #tittle1 {
+	background-color: #FFF;
+	height: 20px;
+	margin-top: 10px;
+	width: 735px;
+}
+#container #list1 {
+	height: auto;
+	margin-top: 10px;
+	width: 740px;
+}
+#container #list1 .row {
+	margin-right: 0px;
+	margin-left: 0px;
+}
+#container #list1 .row .col-xs-3.col-md-12 .panel {
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+#container .row .col-xs-3.col-md-12{
+	padding-left:2px;
+	padding-right:2px;
+}
+
+#container .row .col-xs-3.col-md-12 .panel.panel-default #info1 #titledl {
+	font-size: 22px;
+	color: #FF3333;
+	text-align: center;
+	margin-bottom: 10px;
+}
+#container .row .col-xs-3.col-md-12 .panel.panel-default #info1 img {
+	clear: right;
+	float: left;
+	height: 250px;
+	width: 300px;
+	margin-right: 30px;
+}
+#container .row .col-xs-3.col-md-12 .panel.panel-default #info1 #infoTour {
+	margin-top: 30px;
+}
+#container .row .col-xs-3.col-md-12 .panel.panel-default #info1 #infoTour p {
+	font-size: 15px;
+}
+#container .row .col-xs-3.col-md-12 .panel.panel-default #info1 #infoTour #giomoi {
+	font-size: 20px;
+	color: #F00;
+}
+#container .row .col-xs-3.col-md-12 .panel.panel-default #info1 #infoTour span {
+	font-weight: bold;
+}
+#container .row .col-xs-3.col-md-12 .panel.panel-default #info1 #infoTour #giacu #gachgiua {
+	text-decoration: line-through;
+	font-weight: normal;
+}
+#container .row .col-xs-3.col-md-12 .panel.panel-default .panel-body #infoTour img {
+	padding-left: 4%;
+	width: 520pt;
+	height: 350pt;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+#container .row .col-xs-3.col-md-12 .panel.panel-default .panel-body #infoTour p {
+	margin-left: 5px;
+	width:710px;
+
+}
+#container .row .col-xs-3.col-md-12 .panel.panel-default .panel-body .titledl {
+	color: #900;
+	margin-left: 5px;
+	font-weight: bold;
+}

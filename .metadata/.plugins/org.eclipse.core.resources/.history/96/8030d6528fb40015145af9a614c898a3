@@ -1,0 +1,11 @@
+package DAO;
+
+import Model.Tour;
+
+public interface TourDao {
+	public boolean deleteTour();
+	public void deleteAllTour();
+	public Tour getTour();
+	public void getAllTour();
+
+}

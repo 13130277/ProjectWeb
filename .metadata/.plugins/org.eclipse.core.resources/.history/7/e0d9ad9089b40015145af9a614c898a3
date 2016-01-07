@@ -1,0 +1,85 @@
+package Model;
+
+import java.sql.Date;
+import java.util.ArrayList;
+
+public class Tour {
+	private String idTour;
+	private Tour_Type idTourType;
+	private String nameTour;
+	private Date departure;
+	private Date end;
+	private int amountDays;
+	private String content;
+	private double price;
+	private ArrayList<IMG> list;
+	
+	public Tour() {
+	}
+
+
+	public Tour_Type getIdTourType() {
+		return idTourType;
+	}
+
+	public void setIdTourType(String idTourType,String nameTourType, String parent) {
+		this.idTourType =new Tour_Type(idTourType, nameTourType, parent);
+	}
+
+	public String getIdTour() {
+		return idTour;
+	}
+
+	public void setIdTour(String idTour) {
+		this.idTour = idTour;
+	}
+
+	public String getNameTour() {
+		return nameTour;
+	}
+
+	public void setNameTour(String nameTour) {
+		this.nameTour = nameTour;
+	}
+
+	public Date getDeparture() {
+		return departure;
+	}
+
+	public void setDeparture(Date departure) {
+		this.departure = departure;
+	}
+
+	public Date getEnd() {
+		return end;
+	}
+
+	public void setEnd(Date end) {
+		this.end = end;
+	}
+
+	public int getAmountDays() {
+		return amountDays;
+	}
+
+	public void setAmountDays(int amountDays) {
+		this.amountDays = amountDays;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	
+}

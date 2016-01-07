@@ -1,0 +1,69 @@
+@charset "utf-8";
+#content {
+	background-color: #993;
+	height: auto;
+	width: 350px;
+	border-top-width: thin;
+	border-right-width: thin;
+	border-bottom-width: thin;
+	border-left-width: thin;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+}
+#content #header {
+	height: 35px;
+	float: left;
+	width: 350px;
+	background-color: #3C0;
+}
+#content #header #dangky {
+	height: 25px;
+	float: left;
+	width: 310px;
+	text-align: center;
+	padding-top: 8px;
+	clear: right;
+}
+#content #header #button {
+	text-align: center;
+	float: right;
+	height: 28px;
+	width: 35px;
+	border: thin solid #000;
+	padding-top: 5px;
+}
+#content #input {
+	height: auto;
+	width: 350px;
+	margin-top: 35px;
+}
+#content #input .tx {
+	height: 28px;
+	width: 325px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+#content #input #dkbt3 {
+	color: #FFF;
+	margin-left: 10px;
+	background: #FC3;
+	cursor: pointer;
+	height: 32px;
+	width: 330px;
+	margin-top: 20px;
+	font-size: 18px;
+}
+#content #input #dkbt3:hover {
+	margin-left: 10px;
+	background: #F60;
+	cursor: pointer;
+}
+#content #input #thongbao {
+	margin-left:35px;
+	width:280px;
+	height:70px;
+	text-align:center;
+	border-bottom:1px solid #666;
+}

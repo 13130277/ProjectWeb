@@ -1,0 +1,30 @@
+@charset "utf-8";
+#content #top #right #add {
+	background-color: #93C;
+	text-align: center;
+	clear: both;
+	float: left;
+	height: 50px;
+	width: 100%;
+	margin-top: 15px;
+}
+#content #top #right #madiadiem_title0 {
+	margin-top: 5px;
+}
+
+
+#content #top #right .title {
+	background-color: #3C3;
+	float: left;
+	height: 30px;
+	width: 100%;
+	margin-top: 15px;
+}
+#content #top #right .input {
+	background-color: #F9C;
+	clear: both;
+	float: left;
+	height: 30px;
+	width: 100%;
+	margin-top: 5px;
+}

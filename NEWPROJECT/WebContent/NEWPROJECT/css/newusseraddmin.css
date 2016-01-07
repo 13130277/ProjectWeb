@@ -1,0 +1,105 @@
+@charset "utf-8";
+#content {
+	background-color: #C66;
+	height: auto;
+	width: 1000px;
+	margin-left: 150px;
+}
+#content #header {
+	float: left;
+	height: 50px;
+	width: 1000px;
+	background-color: #C00;
+}
+#content #header #dangnhap {
+	background-color: #39C;
+	float: right;
+	height: 50px;
+	width: 200px;
+}
+#content #menu {
+	background-color: #CC9;
+	clear: both;
+	float: left;
+	height: auto;
+	width: 230px;
+	margin-top: 5px;
+}
+#content #menu ul {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	height: 50px;
+	width: 200px;
+}
+
+#content #menu ul li {
+	list-style: none;
+	background-color: #06F;
+	float: left;
+	height: 30px;
+	width: 228px;
+	border: thin solid #999;
+	text-align: center;
+	margin-top: 5px;
+	padding-top: 10px;
+}
+#content #menu ul li a {
+	text-decoration: none;
+	width: 100px;
+	height: 50px;
+	color: #FFF;
+}
+#content #menu ul li ul li {
+	display:none;
+}
+
+#content #top {
+	background-color: #603;
+	float: left;
+	height: auto;
+	width: 750px;
+	margin-left: 10px;
+	overflow: auto;
+	margin-top: 5px;
+}
+#content #top #thongke {
+	background-color: #C93;
+	clear: both;
+	float: left;
+	height: 100px;
+	width: 745px;
+}
+
+#content #top #thongke .thongke {
+	background-color: #C69;
+	float: left;
+	height: 100px;
+	width: 220px;
+	margin-left: 30px;
+}
+#content #top #thongke .thongke .img {
+	background-color: #CCC;
+	clear: both;
+	float: left;
+	height: 100px;
+	width: 100px;
+}
+
+#content #top #title1 {
+	background-color: #FFF;
+	clear: both;
+	float: left;
+	height: 30px;
+	width: 680px;
+	margin-top: 10px;
+}
+
+
+#content #top .bieudo {
+	background-color: #3C3;
+	float: left;
+	height: 300px;
+	width: 750px;
+	margin-top: 10px;
+}

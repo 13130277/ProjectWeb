@@ -1,0 +1,23 @@
+package Test;
+
+
+import DAO.TypeTourDaoImp;
+import Model.Tour;
+import Model.Tour_Type;
+
+public class Test {
+
+	public static void main(String[] args) {
+		TypeTourDaoImp typeTour = new TypeTourDaoImp();
+		String sql = "SELECT `idTourType`, `nameTourType`, `parent` FROM `tour_type` WHERE `parent`='TrongNuoc'";
+		for (Tour_Type los : typeTour.getListTourType(sql)) {
+			System.out.println(los.getNameType());
+		}
+		Tour tour  = new Tour();
+		String sql2 = "SELECT* FROM tour inner join tour_type on tour.idTourType = tour_type.idTourType";
+		for (Tour tour2 : tour.getAllTour()) {
+			
+		}
+	}
+
+}

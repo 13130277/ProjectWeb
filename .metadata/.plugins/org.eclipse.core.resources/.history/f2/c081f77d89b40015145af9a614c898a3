@@ -1,0 +1,7 @@
+package Model;
+
+public class IMG {
+	private String idImg;
+	private String address;
+
+}

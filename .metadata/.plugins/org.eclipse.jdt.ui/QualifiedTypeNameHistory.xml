@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="org.apache.jasper.tagplugins.jstl.core.ForEach"/>
+<fullyQualifiedTypeName name="DAO.TourDao"/>
+<fullyQualifiedTypeName name="java.io.OutputStream"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="DB.ConnectionDB"/>
+<fullyQualifiedTypeName name="java.util.function.ToDoubleBiFunction"/>
+<fullyQualifiedTypeName name="DAO.TourDaoImp"/>
+<fullyQualifiedTypeName name="Model.Tour"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="DAO.TypeTourDao"/>
+<fullyQualifiedTypeName name="DAO.TypeTourDaoImp"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="Model.Tour_Type"/>
-<fullyQualifiedTypeName name="Model.Tour"/>
-<fullyQualifiedTypeName name="DAO.TourDao"/>
-<fullyQualifiedTypeName name="DAO.TourDaoImp"/>
 </qualifiedTypeNameHistroy>

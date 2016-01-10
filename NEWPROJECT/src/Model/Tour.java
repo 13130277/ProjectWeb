@@ -1,19 +1,41 @@
 package Model;
 
-import java.sql.Date;
-import java.util.ArrayList;
+
+import java.util.Date;
 
 public class Tour {
 	private String idTour;
 	private Tour_Type tourType;
 	private String nameTour;
+	private String img;
 	private Date departure;
 	private Date end;
 	private int amountDays;
-	private String content;
-	private double price;
+	private Content content;
+	private double oldPrice;
+	private double newPrice;
 	private String shortContent;
 	public Tour() {
+	}
+	public String getImg() {
+		return img;
+	}
+	public void setImg(String img) {
+		this.img = img;
+	}
+	public Tour(String idTour, Tour_Type tourType, String nameTour,String img, Date departure, Date end, int amountDays,
+			Content content, double oldPrice, double newPrice, String shortContent) {
+		this.img = img;
+		this.idTour = idTour;
+		this.tourType = tourType;
+		this.nameTour = nameTour;
+		this.departure = departure;
+		this.end = end;
+		this.amountDays = amountDays;
+		this.content = content;
+		this.oldPrice = oldPrice;
+		this.newPrice = newPrice;
+		this.shortContent = shortContent;
 	}
 	public String getIdTour() {
 		return idTour;
@@ -24,8 +46,8 @@ public class Tour {
 	public Tour_Type getTourType() {
 		return tourType;
 	}
-	public void setTourType(Tour_Type idTourType) {
-		this.tourType = idTourType;
+	public void setTourType(Tour_Type tourType) {
+		this.tourType = tourType;
 	}
 	public String getNameTour() {
 		return nameTour;
@@ -51,17 +73,23 @@ public class Tour {
 	public void setAmountDays(int amountDays) {
 		this.amountDays = amountDays;
 	}
-	public String getContent() {
+	public Content getContent() {
 		return content;
 	}
-	public void setContent(String content) {
+	public void setContent(Content content) {
 		this.content = content;
 	}
-	public double getPrice() {
-		return price;
+	public double getOldPrice() {
+		return oldPrice;
 	}
-	public void setPrice(double price) {
-		this.price = price;
+	public void setOldPrice(double oldPrice) {
+		this.oldPrice = oldPrice;
+	}
+	public double getNewPrice() {
+		return newPrice;
+	}
+	public void setNewPrice(double newPrice) {
+		this.newPrice = newPrice;
 	}
 	public String getShortContent() {
 		return shortContent;
@@ -69,27 +97,7 @@ public class Tour {
 	public void setShortContent(String shortContent) {
 		this.shortContent = shortContent;
 	}
-	public ArrayList<IMG> getList() {
-		return list;
-	}
-	public void setList(ArrayList<IMG> list) {
-		this.list = list;
-	}
-	public Tour(String idTour, Tour_Type idTourType, String nameTour, Date departure, Date end, int amountDays,
-			String content, double price, String shortContent, ArrayList<IMG> list) {
-		super();
-		this.idTour = idTour;
-		this.tourType = idTourType;
-		this.nameTour = nameTour;
-		this.departure = departure;
-		this.end = end;
-		this.amountDays = amountDays;
-		this.content = content;
-		this.price = price;
-		this.shortContent = shortContent;
-		this.list = list;
-	}
-	private ArrayList<IMG> list;
+	
 	
 	
 }

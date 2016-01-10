@@ -6,17 +6,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- InstanceBeginEditable name="doctitle" -->
 <title>Tour Du Lịch Tham Quan Nội Thành Đà Lạt - City Tour Đà Lạt 1 Ngày</title>
-<link href="../css/suppedkidcss.css" rel="stylesheet" type="text/css" />
+<link href="/NEWPROJECT/NEWPROJECT/css/suppedkidcss.css" rel="stylesheet" type="text/css" />
 <!-- InstanceEndEditable -->
-<link href="../Bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="../css/footer-distributed-with-address-and-phones.css">
-<link href="../Bootstrap/dist/css/font-awesome.min.css" rel="stylesheet" />
-<link href="../Bootstrap/glyphicons.css" rel="stylesheet" type="text/css" />
-<link href="../css/UpdateAddmin/stylenewaddmin.css" rel="stylesheet" />
-<script src="../Bootstrap/dist/js/jQuery-2.1.4.min.js"></script>
-<script src="../Bootstrap/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="../Bootstrap/dist/js/app.min.js" type="text/javascript"></script>
-<link href="../css/css.css" rel="stylesheet" type="text/css" />
+<link href="/NEWPROJECT/NEWPROJECT/Bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/NEWPROJECT/NEWPROJECT/css/footer-distributed-with-address-and-phones.css">
+<link href="/NEWPROJECT/NEWPROJECT/Bootstrap/dist/css/font-awesome.min.css" rel="stylesheet" />
+<link href="/NEWPROJECT/NEWPROJECT/Bootstrap/glyphicons.css" rel="stylesheet" type="text/css" />
+<link href="/NEWPROJECT/NEWPROJECT/css/UpdateAddmin/stylenewaddmin.css" rel="stylesheet" />
+<script src="/NEWPROJECT/NEWPROJECT/Bootstrap/dist/js/jQuery-2.1.4.min.js"></script>
+<script src="/NEWPROJECT/NEWPROJECT/Bootstrap/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/NEWPROJECT/NEWPROJECT/Bootstrap/dist/js/app.min.js" type="text/javascript"></script>
+<link href="/NEWPROJECT/NEWPROJECT/css/css.css" rel="stylesheet" type="text/css" />
 
 
 

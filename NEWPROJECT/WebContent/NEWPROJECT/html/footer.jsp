@@ -6,13 +6,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
 <!-- InstanceEndEditable -->
-<link href="../Bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="../css/footer-distributed-with-address-and-phones.css">
-<link href="../Bootstrap/dist/css/font-awesome.min.css" rel="stylesheet" />
-<link href="../Bootstrap/glyphicons.css" rel="stylesheet" type="text/css" />
-<script src="../Bootstrap/dist/js/jQuery-2.1.4.min.js"></script>
-<script src="../Bootstrap/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="../Bootstrap/dist/js/app.min.js" type="text/javascript"></script>
+<link href="/NEWPROJECT/NEWPROJECT/Bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/NEWPROJECT/NEWPROJECT/css/footer-distributed-with-address-and-phones.css">
+<link href="/NEWPROJECT/NEWPROJECT/Bootstrap/dist/css/font-awesome.min.css" rel="stylesheet" />
+<link href="/NEWPROJECT/NEWPROJECT/Bootstrap/glyphicons.css" rel="stylesheet" type="text/css" />
+<script src="/NEWPROJECT/NEWPROJECT/Bootstrap/dist/js/jQuery-2.1.4.min.js"></script>
+<script src="/NEWPROJECT/NEWPROJECT/Bootstrap/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/NEWPROJECT/NEWPROJECT/Bootstrap/dist/js/app.min.js" type="text/javascript"></script>
 </head>
 <body>
  <footer class="footer-distributed">

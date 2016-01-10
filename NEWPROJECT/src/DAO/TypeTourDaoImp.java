@@ -13,7 +13,8 @@ import Model.Tour_Type;
 public class TypeTourDaoImp implements TypeTourDao{
 
 	@Override
-	public ArrayList<Tour_Type> getListTourType(String sql) {
+	public ArrayList<Tour_Type> getListTourType() {
+		String sql = "SELECT idTourType, nameTourType, parent FROM tour_type WHERE parent='Du Lịch Trong Nước'";
 		Connection con = ConnectionDB.getConnection();
 		ArrayList<Tour_Type> listTourType = new ArrayList<>();
 		try {
@@ -26,7 +27,7 @@ public class TypeTourDaoImp implements TypeTourDao{
 				tour_Type.setParent(rs.getString("parent"));
 				listTourType.add(tour_Type);
 			}
-			con.close();
+			rs.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

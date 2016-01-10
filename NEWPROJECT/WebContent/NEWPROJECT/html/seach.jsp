@@ -7,21 +7,19 @@
 <!-- InstanceBeginEditable name="doctitle" -->
 <title>CẨM NANG DU LỊCH</title>
 <!-- InstanceEndEditable -->
-<link href="../Bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="../css/footer-distributed-with-address-and-phones.css">
-<link href="../Bootstrap/dist/css/font-awesome.min.css" rel="stylesheet" />
-<link href="../Bootstrap/glyphicons.css" rel="stylesheet" type="text/css" />
-<link href="../css/UpdateAddmin/stylenewaddmin.css" rel="stylesheet" />
-<script src="../Bootstrap/dist/js/jQuery-2.1.4.min.js"></script>
-<script src="../Bootstrap/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="../Bootstrap/dist/js/app.min.js" type="text/javascript"></script>
-<link href="../css/css.css" rel="stylesheet" type="text/css" />
+<link href="/NEWPROJECT/NEWPROJECT/Bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="/NEWPROJECT/NEWPROJECT/css/footer-distributed-with-address-and-phones.css">
+<link href="/NEWPROJECT/NEWPROJECT/Bootstrap/dist/css/font-awesome.min.css" rel="stylesheet" />
+<link href="/NEWPROJECT/NEWPROJECT/Bootstrap/glyphicons.css" rel="stylesheet" type="text/css" />
+<link href="/NEWPROJECT/NEWPROJECT/css/UpdateAddmin/stylenewaddmin.css" rel="stylesheet" />
+<script src="/NEWPROJECT/NEWPROJECT/Bootstrap/dist/js/jQuery-2.1.4.min.js"></script>
+<script src="/NEWPROJECT/NEWPROJECT/Bootstrap/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/NEWPROJECT/NEWPROJECT/Bootstrap/dist/js/app.min.js" type="text/javascript"></script>
+<link href="/NEWPROJECT/NEWPROJECT/css/css.css" rel="stylesheet" type="text/css" />
 <!-- Start WOWSlider.com HEAD section -->
-<link rel="stylesheet" type="text/css" href="../engine1/style.css" />
-<link href="../css/index/body_contenner.css" rel="stylesheet" type="text/css" />
-<link href="../SpryAssets/SpryAccordion.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="../engine1/jquery.js"></script>
-<script src="../SpryAssets/SpryAccordion.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="/NEWPROJECT/NEWPROJECT/engine1/style.css" />
+<link href="/NEWPROJECT/NEWPROJECT/css/index/body_contenner.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/NEWPROJECT/NEWPROJECT/engine1/jquery.js"></script>
 
 <!-- End WOWSlider.com HEAD section -->
 

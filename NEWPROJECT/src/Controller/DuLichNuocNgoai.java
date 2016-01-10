@@ -1,23 +1,29 @@
 package Controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import DAO.TourDaoImp;
+import Model.Tour;
 
 /**
- * Servlet implementation class DangKy
+ * Servlet implementation class DuLichNuocNgoai
  */
-@WebServlet(name = "DangKy1", urlPatterns = { "/DangKy1" })
-public class DangKy extends HttpServlet {
+@WebServlet("/DuLichNuocNgoai")
+public class DuLichNuocNgoai extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public DangKy() {
+    public DuLichNuocNgoai() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -26,16 +32,24 @@ public class DangKy extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		toDo( request, response);
 	}
+
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		toDo( request, response);
 	}
 
+	private void toDo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+			TourDaoImp tour = new TourDaoImp();
+			ArrayList<Tour> listTourDuLichTrongNuoc = tour.getAllTour("Du Lịch Nước Ngoài");
+			HttpSession session = request.getSession();
+			session.setAttribute("listTourDuLichTrongNuoc", listTourDuLichTrongNuoc);
+			request.getRequestDispatcher("/NEWPROJECT/html/DuLichNuocNgoai.jsp").forward(request, response);
+			
+		
+	}
 }

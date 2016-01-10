@@ -13,6 +13,11 @@ public Tour_Type(String idTourType, String nameType, String  parent) {
 	this.parent = parent;
 }
 
+@Override
+public String toString() {
+	return "Tour_Type [idTourType=" + idTourType + ", nameType=" + nameType + ", parent=" + parent + "]";
+}
+
 public String getParent() {
 	return parent;
 }

@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/TourTrongNuoc.dwt" codeOutsideHTMLIsLocked="false" -->
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/newTest.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- InstanceBeginEditable name="doctitle" -->
 <title>DU LỊCH NƯỚC NGOÀI</title>
-<link href="/NEWPROJECT/NEWPROJECT/css/stylekid.css" rel="stylesheet" type="text/css" />
+<link href="../css/stylekid.css" rel="stylesheet" type="text/css" />
 <!-- InstanceEndEditable -->
 <link href="/NEWPROJECT/NEWPROJECT/Bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="/NEWPROJECT/NEWPROJECT/css/footer-distributed-with-address-and-phones.css">
@@ -24,7 +24,7 @@
 <link href="/NEWPROJECT/NEWPROJECT/css/index/body_contenner.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/NEWPROJECT/NEWPROJECT/engine1/jquery.js"></script>
 
-
+<!-- End WOWSlider.com HEAD section -->
  <script type="text/javascript">
 	$(document).ready(function() {
 		$('#header').load("LoadDataHeader");
@@ -33,14 +33,11 @@
 </head>
 
 <body>
-<div id="header"></div>
 <div id="container">
+  <div id="header"></div>
+  <!-- InstanceEndEditable --><!-- InstanceBeginEditable name="change" -->
   <div class="container">
-    
-
-<div class="tittle">
-    <div class="backgr">Tour Du Lịch Nước Ngoài</div>
-  </div>
+  <div id="tittle1"></div>
     <div id="list1">
   <!--start row-->
   <div class="row"> 
@@ -256,9 +253,10 @@
     <!--end col--> 
     <!--end row--> 
   </div>
-
+  
+  <!-- InstanceEndEditable -->
 <%@include file="footer.jsp" %>
-  <!-- InstanceEndEditable --></div>
 </div>
+
 </body>
 <!-- InstanceEnd --></html>

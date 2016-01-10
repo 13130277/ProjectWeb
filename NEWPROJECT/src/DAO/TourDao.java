@@ -6,8 +6,8 @@ import Model.Tour;
 
 public interface TourDao {
 	public boolean deleteTour(String sql);
-	public void deleteAllTour(String sql);
+	
 	public ArrayList<Tour> getInfoTour(String sql);
-	public ArrayList<Tour> getAllTour(String sql);
+	public ArrayList<Tour> getAllTour(String tour_type);
 
 }

@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,7 +22,6 @@ public class Resource extends HttpServlet {
      */
     public Resource() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
@@ -31,7 +29,9 @@ public class Resource extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// String fullPath = IMAGE_DIR + fileName;
-				String fullPath = "";
+				
+				String fullPath = request.getParameter("url");
+				System.out.println(fullPath+"lientamtest");
 				File downloadFile = new File(fullPath);
 				FileInputStream inputStream = new FileInputStream(downloadFile);
 
@@ -42,18 +42,8 @@ public class Resource extends HttpServlet {
 					mimeType = "application/octet-stream";
 				}
 				System.out.println("MIME type: " + mimeType);
-
-				// set content attributes for the response
 				response.setContentType(mimeType);
 				response.setContentLength((int) downloadFile.length());
-
-				// set headers for the response can download file
-				// String headerKey = "Content-Disposition";
-				// String headerValue = String.format("attachment; filename=\"%s\"",
-				// downloadFile.getName());
-				// response.setHeader(headerKey, headerValue);
-
-				// get output stream of the response
 				OutputStream outStream = response.getOutputStream();
 
 				byte[] buffer = new byte[10240];
@@ -66,13 +56,13 @@ public class Resource extends HttpServlet {
 
 				inputStream.close();
 				outStream.close();
+				
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
 

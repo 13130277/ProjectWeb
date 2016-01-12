@@ -2,10 +2,18 @@ package Model;
 
 public class SmallContent {
 private String idSmallConTent;
+private String content;
 private String img;
-public SmallContent(String idSmallConTent, String img) {
+public SmallContent(String idSmallConTent, String img, String content) {
 	this.idSmallConTent = idSmallConTent;
 	this.img = img;
+	this.content = content;
+}
+public String getContent() {
+	return content;
+}
+public void setContent(String content) {
+	this.content = content;
 }
 public SmallContent() {
 }

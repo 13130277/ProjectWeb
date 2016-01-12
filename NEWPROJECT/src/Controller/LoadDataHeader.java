@@ -49,13 +49,13 @@ public class LoadDataHeader extends HttpServlet {
 		toDo(request, response);
 	}
 
-	private void toDo(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		
-		
+	private void toDo(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {	
 		TypeTourDaoImp typeTourDaoImp = new TypeTourDaoImp();
-		ArrayList<Tour_Type> listTypeTour = typeTourDaoImp.getListTourType();
+		ArrayList<Tour_Type> listTourTN = typeTourDaoImp.getListTourTypeParent("Du Lịch Trong Nước");
+		ArrayList<Tour_Type> listTourNN = typeTourDaoImp.getListTourTypeParent("Du Lịch Nước Ngoài");
 		HttpSession session = request.getSession();
-		session.setAttribute("listTypeTour", listTypeTour);
+		session.setAttribute("listTourTN", listTourTN);
+		session.setAttribute("listTourNN", listTourNN);
 		request.getRequestDispatcher("/NEWPROJECT/html/header.jsp").forward(request, response);
 
 	}

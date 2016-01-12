@@ -11,7 +11,9 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import DAO.TourDaoImp;
+import DAO.TypeTourDaoImp;
 import Model.Tour;
+import Model.Tour_Type;
 
 /**
  * Servlet implementation class DuLichNuocNgoai
@@ -44,11 +46,24 @@ public class DuLichNuocNgoai extends HttpServlet {
 	}
 
 	private void toDo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			TourDaoImp tour = new TourDaoImp();
-			ArrayList<Tour> listTourDuLichTrongNuoc = tour.getAllTour("Du Lịch Nước Ngoài");
-			HttpSession session = request.getSession();
-			session.setAttribute("listTourDuLichTrongNuoc", listTourDuLichTrongNuoc);
-			request.getRequestDispatcher("/NEWPROJECT/html/DuLichNuocNgoai.jsp").forward(request, response);
+		TourDaoImp tour = new TourDaoImp();
+		ArrayList<Tour> listTourDuLichNuocNgoai = new ArrayList<>();
+		String param = (String) request.getParameter("newUrl");
+		if (param.equals("all")) {
+			listTourDuLichNuocNgoai = tour.getAllTour("Du Lịch Nước Ngoài");
+		} else {
+			TypeTourDaoImp tourType = new TypeTourDaoImp();
+			ArrayList<Tour_Type> listTourType = tourType.getListTourTypeParent("Du Lịch Nước Ngoài");
+			for (Tour_Type newTType : listTourType) {
+				String nTT = newTType.getIdTourType();
+				if (param.equals(nTT)) {
+					listTourDuLichNuocNgoai = tour.getAllTour(nTT);
+				}
+			}
+		}
+		HttpSession session = request.getSession();
+		session.setAttribute("listTourDuLichNuocNgoai", listTourDuLichNuocNgoai);
+		request.getRequestDispatcher("/NEWPROJECT/html/DuLichNuocNgoai.jsp").forward(request, response);
 			
 		
 	}

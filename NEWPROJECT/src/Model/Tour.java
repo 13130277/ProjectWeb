@@ -1,6 +1,7 @@
 package Model;
 
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Tour {
@@ -11,7 +12,7 @@ public class Tour {
 	private Date departure;
 	private Date end;
 	private int amountDays;
-	private Content content;
+	private ArrayList<Content> content;
 	private double oldPrice;
 	private double newPrice;
 	private String shortContent;
@@ -24,7 +25,7 @@ public class Tour {
 		this.img = img;
 	}
 	public Tour(String idTour, Tour_Type tourType, String nameTour,String img, Date departure, Date end, int amountDays,
-			Content content, double oldPrice, double newPrice, String shortContent) {
+			ArrayList<Content> content, double oldPrice, double newPrice, String shortContent) {
 		this.img = img;
 		this.idTour = idTour;
 		this.tourType = tourType;
@@ -73,10 +74,10 @@ public class Tour {
 	public void setAmountDays(int amountDays) {
 		this.amountDays = amountDays;
 	}
-	public Content getContent() {
+	public ArrayList<Content> getContent() {
 		return content;
 	}
-	public void setContent(Content content) {
+	public void setContent(ArrayList<Content> content) {
 		this.content = content;
 	}
 	public double getOldPrice() {

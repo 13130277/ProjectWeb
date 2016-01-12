@@ -48,7 +48,6 @@ public class LoadDataHome extends HttpServlet {
 		loadData(request, response);
 	}
 	private void loadData(HttpServletRequest request, HttpServletResponse response) throws  ServletException, IOException {
-		String sl = "SELECT* FROM tour inner join tour_type on tour.idTourType = tour_type.idTourType ";
 		TourDaoImp tour = new TourDaoImp();
 		ArrayList<Tour> listTour = tour.getAllTour("Du Lịch Trong Nước");
 		HttpSession session = request.getSession();

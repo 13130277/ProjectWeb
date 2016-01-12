@@ -4,14 +4,22 @@
 <fullyQualifiedTypeName name="DAO.TourDao"/>
 <fullyQualifiedTypeName name="java.io.OutputStream"/>
 <fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="DAO.TypeTourDao"/>
+<fullyQualifiedTypeName name="java.util.function.ToDoubleBiFunction"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="DB.ConnectionDB"/>
-<fullyQualifiedTypeName name="java.util.function.ToDoubleBiFunction"/>
-<fullyQualifiedTypeName name="DAO.TourDaoImp"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="Model.SmallContent"/>
+<fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
 <fullyQualifiedTypeName name="Model.Tour"/>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
-<fullyQualifiedTypeName name="DAO.TypeTourDao"/>
-<fullyQualifiedTypeName name="DAO.TypeTourDaoImp"/>
+<fullyQualifiedTypeName name="Model.Content"/>
+<fullyQualifiedTypeName name="DAO.HandBookDao"/>
+<fullyQualifiedTypeName name="DAO.TourDaoImp"/>
+<fullyQualifiedTypeName name="DAO.HandBookImp"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="Model.HandBook"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="DAO.TypeTourDaoImp"/>
 <fullyQualifiedTypeName name="Model.Tour_Type"/>
 </qualifiedTypeNameHistroy>

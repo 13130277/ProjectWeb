@@ -18,13 +18,17 @@
 <script src="/NEWPROJECT/NEWPROJECT/Bootstrap/dist/js/app.min.js" type="text/javascript"></script>
 <link href="/NEWPROJECT/NEWPROJECT/css/css.css" rel="stylesheet" type="text/css" />
 
-
+ <script type="text/javascript">
+	$(document).ready(function() {
+		$('#header').load("LoadDataHeader");
+	});
+</script>
 
 </head>
 
 <body>
+<div id="header"></div>
 <div id="container">
-<%@include file="header.jsp" %>
   <!-- InstanceEndEditable --><!-- InstanceBeginEditable name="change" -->
   <div id="ttdatTour">
   <div class="panel panel-default frist" >
@@ -35,19 +39,19 @@
         <form>
           <div class="form-group">
             <label for="text">Họ Tên : <span style="color:#F00;">*</span></label>
-            <input type="text" class="form-control" id="text" placeholder="Họ Và Tên">
+            <input type="text" class="form-control" id="text" placeholder="Họ Và Tên"/>
           </div>
           <div class="form-group">
             <label for="text">Số Điện Thoại : <span style="color:#F00;">*</span> </label>
-            <input type="text" class="form-control" id="text" placeholder="Số Điện Thoại">
+            <input type="text" class="form-control" id="text" placeholder="Số Điện Thoại"/>
           </div>
           <div class="form-group">
             <label for="inputEmail"> Email : <span style="color:#F00;">*</span> </label>
-            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email"/>
           </div>
           <div class="form-group">
             <label for="text"> Địa chỉ : </label>
-            <input type="text" class="form-control" id="text" placeholder="Địa chỉ">
+            <input type="text" class="form-control" id="text" placeholder="Địa chỉ"/>
           </div>
         </form>
       </div>
@@ -67,11 +71,11 @@
         </div>
         <div class="form-group">
             <label>Ngày Khởi Hành</label>
-            <input type="text" class="form-control" value="22/12/1025">
+            <input type="text" class="form-control" value="22/12/1025"/>
         </div>
         <div class="form-group">
             <label>Số lượng tour đặt</label>
-            <input type="number" class="form-control">
+            <input type="number" class="form-control"/>
         </div>
       </div>
       <div class="booking_bill background_none">

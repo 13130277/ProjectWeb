@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import DAO.TourDaoImp;
-import DAO.TypeTourDao;
 import DAO.TypeTourDaoImp;
 import Model.Tour;
 import Model.Tour_Type;
@@ -53,15 +52,21 @@ public class DuLichTrongNuoc extends HttpServlet {
 	}
 
 	private void toDo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String param = (String) request.getAttribute("newUrl");
 		TourDaoImp tour = new TourDaoImp();
-		TypeTourDaoImp tourType = new TypeTourDaoImp();
-		ArrayList<Tour_Type> listTourType = tourType.getListTourType();
-		ArrayList<Tour> listTourDuLichTrongNuoc = tour.getAllTour("Du Lịch Trong Nước");
-		for (Tour_Type newTType : listTourType) {
-			String nTT = newTType.getNameType();
-			if (param.equals(nTT)) {
-				listTourDuLichTrongNuoc = tour.getAllTour(nTT);
+		ArrayList<Tour> listTourDuLichTrongNuoc = new ArrayList<>();
+		String param = (String) request.getParameter("newUrl");
+		System.out.println(param+"tamtam------------");
+		if (param.equals("all")) {
+			System.out.println("connect ...");
+			listTourDuLichTrongNuoc = tour.getAllTour("Du Lịch Trong Nước");
+		} else {
+			TypeTourDaoImp tourType = new TypeTourDaoImp();
+			ArrayList<Tour_Type> listTourType = tourType.getListTourTypeParent("Du Lịch Trong Nước");
+			for (Tour_Type newTType : listTourType) {
+				String nTT = newTType.getIdTourType();
+				if (param.equals(nTT)) {
+					listTourDuLichTrongNuoc = tour.getAllTour(nTT);
+				}
 			}
 		}
 		HttpSession session = request.getSession();

@@ -1,18 +1,42 @@
 package Model;
 
-import java.sql.Date;
 
 public class User {
-    String idUser;
-    String fullName;
-    Date birthday;
-    String userName;
-    String pass;
-    String phone;
-    String address;
-    int active;
+    @Override
+	public String toString() {
+		return "User [idUser=" + idUser + ", fullName=" + fullName + ", userName=" + userName + ", email=" + email
+				+ ", pass=" + pass + ", phone=" + phone + ", address=" + address + ", active=" + active + ", img=" + img
+				+ "]";
+	}
 
-    public User() {
+	private String idUser;
+    private String fullName;
+    private String userName;
+    private String email;
+    private String pass;
+    private String phone;
+    private String address;
+    private int active;
+    private String img;
+    
+
+    public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getImg() {
+		return img;
+	}
+
+	public void setImg(String img) {
+		this.img = img;
+	}
+
+	public User() {
     }
 
 	public String getIdUser() {
@@ -31,13 +55,6 @@ public class User {
 		this.fullName = fullName;
 	}
 
-	public Date getBirthday() {
-		return birthday;
-	}
-
-	public void setBirthday(Date birthday) {
-		this.birthday = birthday;
-	}
 
 	public String getUserName() {
 		return userName;

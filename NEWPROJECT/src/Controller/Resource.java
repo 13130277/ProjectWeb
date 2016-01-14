@@ -31,7 +31,6 @@ public class Resource extends HttpServlet {
 		// String fullPath = IMAGE_DIR + fileName;
 				
 				String fullPath = request.getParameter("url");
-				System.out.println(fullPath+"lientamtest");
 				File downloadFile = new File(fullPath);
 				FileInputStream inputStream = new FileInputStream(downloadFile);
 

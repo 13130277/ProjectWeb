@@ -1,8 +1,0 @@
-package DAO;
-
-public interface TourDao {
-	public void deleteTour();
-	public void getTour();
-	public void getAllTour();
-
-}

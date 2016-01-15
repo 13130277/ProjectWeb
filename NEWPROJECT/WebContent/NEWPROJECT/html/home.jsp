@@ -33,7 +33,7 @@
 	type="text/javascript"></script>
  <script type="text/javascript">
 	$(document).ready(function() {
-		$('#header').load("LoadDataHeader");
+		$('#header').load("LoadDataHeader?id=123");
 	});
 </script>
 </head>

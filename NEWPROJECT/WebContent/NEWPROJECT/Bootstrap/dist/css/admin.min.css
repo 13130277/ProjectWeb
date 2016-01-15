@@ -3635,4 +3635,7 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e73f7c', endCo
 .table-responsive>.table tr th, .table-responsive>.table tr td {
 	white-space: normal!important
 }
+.form-group .has-feedback span{
+	color: red;
+}}
 }

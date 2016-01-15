@@ -5,7 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.StringTokenizer;
 
+import DB.ConnectionDB;
 import DB.ConnectionPool;
 import Model.User;
 
@@ -85,20 +87,21 @@ public class UserDaoImp implements UserDao {
 	}
 
 	@Override
-	public boolean register( String fullName, String userName, String email,  String pass,
-			String phone, String address) {
-		String sql = "INSERT INTO `user`(idUser, fullName, userName, email, pass, phone, address, active) VALUES ('US0010',?,?,?,?,?,?,0)";
+	public boolean register(String fullName, String userName, String email, String pass, String phone, String address) {
+		
+		String idUser = cutString();
+		String sql = "INSERT INTO `user`(`idUser`, `fullName`, `userName`, `email`, `img`, `pass`, `phone`, `address`, `active`) VALUES (?,?,?,?,'abc',?,?,?,1);";
 		boolean result = false;
 		Connection con = new ConnectionPool().getConnection();
 		try {
 			PreparedStatement sqlr = con.prepareStatement(sql);
-			sqlr.setString(1, fullName);
-			sqlr.setString(2, userName);
-			sqlr.setString(3, email);
-			sqlr.setString(4, pass);
-			sqlr.setString(5, phone);
-			sqlr.setString(6, address);
-
+			sqlr.setString(1, idUser);
+			sqlr.setString(2, fullName);
+			sqlr.setString(3, userName);
+			sqlr.setString(4, email);
+			sqlr.setString(5, pass);
+			sqlr.setString(6, phone);
+			sqlr.setString(7, address);
 			int number = sqlr.executeUpdate();
 			if (number > 0) {
 				result = true;
@@ -118,13 +121,13 @@ public class UserDaoImp implements UserDao {
 		boolean result = false;
 		Connection con = new ConnectionPool().getConnection();
 		try {
-		PreparedStatement sqlu = con.prepareStatement(sql);
+			PreparedStatement sqlu = con.prepareStatement(sql);
 			sqlu.setString(1, userName);
 			ResultSet rs = sqlu.executeQuery();
 			while (rs.next()) {
 				result = true;
 			}
-			con.close();
+			rs.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -138,13 +141,13 @@ public class UserDaoImp implements UserDao {
 		boolean result = false;
 		Connection con = new ConnectionPool().getConnection();
 		try {
-		PreparedStatement sqlu = con.prepareStatement(sql);
+			PreparedStatement sqlu = con.prepareStatement(sql);
 			sqlu.setString(1, email);
 			ResultSet rs = sqlu.executeQuery();
 			while (rs.next()) {
 				result = true;
 			}
-			con.close();
+			rs.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -158,19 +161,19 @@ public class UserDaoImp implements UserDao {
 		boolean result = false;
 		Connection c = new ConnectionPool().getConnection();
 		try {
-		PreparedStatement sqll = c.prepareStatement(sql);
+			PreparedStatement sqll = c.prepareStatement(sql);
 
 			sqll.setString(1, user.getUserName());
-			sqll.setString(2, user.getPass());   			
-			ResultSet rs =  sqll.executeQuery();
-			
-			while(rs.next() == true) {
+			sqll.setString(2, user.getPass());
+			ResultSet rs = sqll.executeQuery();
+
+			while (rs.next() == true) {
 				result = true;
-				
+
 				break;
 			}
-			
-			c.close();
+
+			rs.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -184,15 +187,15 @@ public class UserDaoImp implements UserDao {
 		String sql = "update user set pass = ? where userName = ?";
 		Connection con = new ConnectionPool().getConnection();
 		try {
-		PreparedStatement sqlcp = con.prepareStatement(sql);
-			sqlcp.setString(1, pass); 
-			sqlcp.setString(2, userName); 
+			PreparedStatement sqlcp = con.prepareStatement(sql);
+			sqlcp.setString(1, pass);
+			sqlcp.setString(2, userName);
 			int number = sqlcp.executeUpdate();
 			if (number > 0) {
 				result = true;
 			}
 
-			con.close();
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -206,7 +209,7 @@ public class UserDaoImp implements UserDao {
 		boolean result = false;
 		Connection con = new ConnectionPool().getConnection();
 		try {
-		PreparedStatement sqlcpa = con.prepareStatement(sql);
+			PreparedStatement sqlcpa = con.prepareStatement(sql);
 
 			sqlcpa.setString(1, userName);
 			sqlcpa.setString(2, pass);
@@ -215,7 +218,7 @@ public class UserDaoImp implements UserDao {
 				result = true;
 			}
 
-			con.close();
+			rs.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -228,16 +231,16 @@ public class UserDaoImp implements UserDao {
 		boolean result = false;
 		Connection c = new ConnectionPool().getConnection();
 		try {
-		PreparedStatement sqlf = c.prepareStatement(sql);
+			PreparedStatement sqlf = c.prepareStatement(sql);
 			sqlf.setString(1, user);
 			sqlf.setString(2, mail);
-			ResultSet rs =  sqlf.executeQuery();
-			
-			while(rs.next() == true) {
+			ResultSet rs = sqlf.executeQuery();
+
+			while (rs.next() == true) {
 				result = true;
 				break;
 			}
-			c.close();
+			rs.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -251,16 +254,16 @@ public class UserDaoImp implements UserDao {
 		Connection con = new ConnectionPool().getConnection();
 		String password = "null";
 		try {
-    	PreparedStatement sqlgp = con.prepareStatement(sql);
+			PreparedStatement sqlgp = con.prepareStatement(sql);
 			sqlgp = con.prepareStatement(sql);
 			sqlgp.setString(1, user);
 			sqlgp.setString(2, mail);
 			ResultSet rs = sqlgp.executeQuery();
-	        while (rs.next()) { 	        	
-	        	password = rs.getString("pass");
-	        }
-		
-			con.close();
+			while (rs.next()) {
+				password = rs.getString("pass");
+			}
+
+			rs.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -269,13 +272,13 @@ public class UserDaoImp implements UserDao {
 
 	@Override
 	public User getUserInfo(String idUser) {
-		String sql ="select * from user where idUser = ?";
+		String sql = "select * from user where idUser = ?";
 		Connection c = new ConnectionPool().getConnection();
 		User us = new User();
 		try {
-		PreparedStatement sqlui = c.prepareStatement(sql);
+			PreparedStatement sqlui = c.prepareStatement(sql);
 			sqlui.setString(1, idUser);
-			ResultSet rs =  sqlui.executeQuery();   			
+			ResultSet rs = sqlui.executeQuery();
 			if (rs.next()) {
 				us.setIdUser(rs.getString("idUser"));
 				us.setFullName(rs.getString("fullName"));
@@ -285,7 +288,7 @@ public class UserDaoImp implements UserDao {
 				us.setPhone(rs.getString("phone"));
 				us.setAddress(rs.getString("address"));
 			}
-			c.close();
+			rs.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -298,25 +301,53 @@ public class UserDaoImp implements UserDao {
 		int countercustomer = 1;
 		Connection con = new ConnectionPool().getConnection();
 		try {
-		PreparedStatement ct = con.prepareStatement(sql);
-	        ResultSet rs = ct.executeQuery();
-	        while (rs.next()) { 	        	
-	        	countercustomer = rs.getInt(1);
-	        }
-			con.close();
+			PreparedStatement ct = con.prepareStatement(sql);
+			ResultSet rs = ct.executeQuery();
+			while (rs.next()) {
+				countercustomer = rs.getInt(1);
+			}
+			rs.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		return countercustomer;
 	}
 
-public static void main(String[] args) {
-	UserDaoImp daoImp = new UserDaoImp();
-//	for (User user : daoImp.getAll(4, 0)) {
-//		System.out.println(user.toString());
-//	}
-//	System.out.println(daoImp.deleteaCustomer("utLT11"));
-//	daoImp.register("US002", "Trần Ngọc Minh Thư", "Minh Thư", "longnguyen11095@gmail.com"," lientam", "ngocTam", "01672651508", "Linh Trung 01");
-	System.out.println(daoImp.getpassforgot("Minh Thư", "longnguyen110995@gmail.com"));
-}
+	public String cutString() {
+		String string = "";
+		int count = 0;
+		String sql = "select idUser from user";
+		Connection con = ConnectionDB.getConnection();
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			System.out.println(rs.last());
+			if (rs.last()) {
+				string = rs.getString("idUser");
+				int length = string.length();
+				String oString = string.substring(0, 2);
+				count = Integer.parseInt(string.substring(2, length));
+				string = oString + (count + 1);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return string;
+	}
+
+	public static void main(String[] args) {
+		UserDaoImp daoImp = new UserDaoImp();
+		System.out.println(daoImp.checkRegister("Liên Ngọc"));
+//		System.out.println(daoImp.cutString());
+//		daoImp.register("Phan Thị Ngọc Tâm", "Liên Tâm", "lientam110995@gmail.com", "123456", "01672651508", "Linh Trung Thủ Đức");
+		// for (User user : daoImp.getAll(4, 0)) {
+		// System.out.println(user.toString());
+		// }
+		// System.out.println(daoImp.deleteaCustomer("utLT11"));
+		// daoImp.register("US002", "Trần Ngọc Minh Thư", "Minh Thư",
+		// "longnguyen11095@gmail.com"," lientam", "ngocTam", "01672651508",
+		// "Linh Trung 01");
+		// System.out.println(daoImp.getpassforgot("Minh Thư",
+		// "longnguyen110995@gmail.com"));
+	}
 }

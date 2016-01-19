@@ -8,6 +8,10 @@ public class User {
 				+ ", pass=" + pass + ", phone=" + phone + ", address=" + address + ", active=" + active + ", img=" + img
 				+ "]";
 	}
+    @Override
+    public boolean equals(Object arg0) {
+    	return super.equals(arg0);
+    }
 
 	private String idUser;
     private String fullName;

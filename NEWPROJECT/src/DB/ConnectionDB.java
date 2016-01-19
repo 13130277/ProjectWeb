@@ -9,7 +9,6 @@ public class ConnectionDB {
 	static Connection connection = null;
 	public ConnectionDB() {
 	}
-
 	public static   ConnectionDB getInstance() {
 		if (instance==null)
 			instance = new ConnectionDB();
@@ -19,7 +18,7 @@ public class ConnectionDB {
 	public static boolean openConnection (){
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/project?setUnicode=true&characterEncoding=UTF-8", "root", "");
+			connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1.:3306/project?setUnicode=true&characterEncoding=UTF-8", "root", "");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {

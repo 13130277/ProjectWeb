@@ -39,23 +39,26 @@
 <div id="header"></div>
 <div id="container">
   <div class="container">
-  <div id="tittle1"></div>
+  <div id="tittle1">Du Lịch Trong Nước</div>
   <div id="list1">
   <!--start row-->
   <div class="row"> 
     <!--col-->
-    <%Tour tour = listTour.get(2); %>
+    <%for(Tour tour : listTour){
+    	 tour.getIdTour();
+    	%>
+    }
     <div class="col-xs-3 col-md-8">
       <div class="thumbnail"  id="info1"> <img src="Resource?url=<%=tour.getImg() %>"
       title="Du Lịch Đà Lạt" />
         <div class="caption">
           <h3><%=tour.getNameTour() %></h3>
-          <p><%=tour.getShortContent() %></p>
+          <p><%= tour.getShortContent() %></p>
           <p><a href="BookTour.jsp" class="btn btn-primary" role="button">Đặt tour</a>
            <a href="" class="btn btn-default" role="button">Xem chi tiết</a></p>
         </div>
       </div>
-    </div>
+    </div><%} %>
     <!--end col--> 
     
     <!--col-->

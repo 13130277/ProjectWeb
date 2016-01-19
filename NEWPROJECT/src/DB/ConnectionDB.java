@@ -19,7 +19,7 @@ public class ConnectionDB {
 	public static boolean openConnection (){
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/project?setUnicode=true&characterEncoding=UTF-8", "root", "");
+			connection = DriverManager.getConnection("jdbc:mysql://192.168.117.127:3306/project?setUnicode=true&characterEncoding=UTF-8", "root", "");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {

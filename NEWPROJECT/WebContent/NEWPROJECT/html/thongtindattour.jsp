@@ -91,21 +91,34 @@
 									<td>Tổng</td>
 								</tr>
 								<tr class="active">
-									<td class="product-name"><a href="TourPhanThiet.jsp">Tour
-											Du Lịch Tham Quan Nội Thành Đà Lạt - City Tour Đà Lạt 1 Ngày</a>
-										<strong class="product-quantity">× 1</strong>
+									<td class="product-name"><strong class="product-quantity">
+											1× </strong><a href="TourPhanThiet.jsp">Tour Du Lịch Tham Quan Nội
+											Thành Đà Lạt - City Tour Đà Lạt 1 Ngày</a>
 										<td class="product-total"><span class="amount">3.700.000&nbsp;₫</span></td>
 								</tr>
 								<tr class="active">
-									<td><strong>Ngày Đi : </strong></td>
-									<td>22/12/2015</td>
-								</tr>
+									<form name="formupdate" method="post" action="updateProduct">
+										<td><input name="count" type="text" id="count"
+											style="width: 20px"> <%--<input name="id" type="hidden" value="<%=p.getId()%>"> --%>
+												<input type="submit" value="Cập Nhật"></td>
+										<td><form name="formdel" method="post"
+												action="delProduct">
+												<%-- <input name="id" type="hidden" value="<%=p.getId()%>"> --%>
+												<input type="submit" value="Xóa">
+											</form></td>
+									</form>
+									<tr class="active">
+										<td><strong>Ngày Đi : </strong></td>
+										<td>22/12/2015</td>
+									</tr>
 								<tr class="active">
 									<td><strong>Người Lớn : </strong></td>
 									<td>1</td>
 								</tr>
+
+								</tr>
 							</tbody>
-							
+
 						</table>
 						<h3>Chi tiết khách hàng</h3>
 						</header>

@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import DAO.TypeTourDaoImp;
 import Model.Tour_Type;
+import Model.User;
 
 /**
  * Servlet implementation class LoadData
@@ -40,14 +41,13 @@ public class LoadDataHeader extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setCharacterEncoding("UTF-8");
 		request.setCharacterEncoding("UTF-8");
 		toDo(request, response);
 	}
 
-	private void toDo(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {	
+	private void toDo(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		TypeTourDaoImp typeTourDaoImp = new TypeTourDaoImp();
 		ArrayList<Tour_Type> listTourTN = typeTourDaoImp.getListTourTypeParent("Du Lịch Trong Nước");
 		ArrayList<Tour_Type> listTourNN = typeTourDaoImp.getListTourTypeParent("Du Lịch Nước Ngoài");
@@ -55,7 +55,6 @@ public class LoadDataHeader extends HttpServlet {
 		session.setAttribute("listTourTN", listTourTN);
 		session.setAttribute("listTourNN", listTourNN);
 		request.getRequestDispatcher("/NEWPROJECT/html/header.jsp").forward(request, response);
-
 	}
 
 }

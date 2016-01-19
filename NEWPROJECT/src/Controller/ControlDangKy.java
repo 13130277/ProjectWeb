@@ -101,7 +101,7 @@ public class ControlDangKy extends HttpServlet {
 				request.getRequestDispatcher("/NEWPROJECT/html/DangKy.jsp").forward(request, response);
 			}
 			if (u.checkRegister(userName)) {
-				System.out.println("ngọc Tâm");
+				
 				request.setAttribute("userName", "Tên tài khoản này đã được đăng ký");
 				request.setAttribute("userNameTrue", "");
 				request.getRequestDispatcher("/NEWPROJECT/html/DangKy.jsp").forward(request, response);

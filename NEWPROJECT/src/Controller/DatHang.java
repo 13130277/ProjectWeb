@@ -1,26 +1,31 @@
 package Controller;
 
 import java.io.IOException;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import DAO.TourDaoImp;
+import Model.Tour;
+import Model.User;
 
 /**
- * Servlet implementation class DangNhap
+ * Servlet implementation class DatHang
  */
-@WebServlet("/DangNhap")
-public class DangNhap extends HttpServlet {
+@WebServlet("/DatHang")
+public class DatHang extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public DangNhap() {
+	public DatHang() {
+
 		super();
+		// TODO Auto-generated constructor stub
 	}
 
 	/**
@@ -29,6 +34,8 @@ public class DangNhap extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		response.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding("UTF-8");
 		toDo(request, response);
 	}
 
@@ -38,12 +45,25 @@ public class DangNhap extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		response.setCharacterEncoding("UTF-8");
+		request.setCharacterEncoding("UTF-8");
 		toDo(request, response);
 	}
 
-		private void toDo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	private void toDo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession session = request.getSession();
+		new CheckLogin();
+		User us = (User) session.getAttribute("user");
+		if (us==null) {
 			request.getRequestDispatcher("NEWPROJECT/html/login.jsp").forward(request, response);
+		}else {
+			String idTour = request.getParameter("idTour");
+			TourDaoImp daoImp = new TourDaoImp();
+			Tour tour = daoImp.getInfoTour(idTour);
+			request.setAttribute("infoTour", tour);
+			
 		}
+	}
 	
 
 }

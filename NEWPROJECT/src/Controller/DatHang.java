@@ -61,6 +61,8 @@ public class DatHang extends HttpServlet {
 			TourDaoImp daoImp = new TourDaoImp();
 			Tour tour = daoImp.getInfoTour(idTour);
 			request.setAttribute("infoTour", tour);
+			request.getRequestDispatcher("NEWPROJECT/html/thongtindattour.jsp").forward(request, response);
+			
 			
 		}
 	}

@@ -1,3 +1,4 @@
+<%@page import="Model.User"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@page import="java.util.ArrayList"%>
@@ -36,18 +37,45 @@
 </head>
 <body>
 	<%
+		User us;
 		ArrayList<Tour_Type> listTourTN = (ArrayList<Tour_Type>) session.getAttribute("listTourTN");
 		ArrayList<Tour_Type> listTourNN = (ArrayList<Tour_Type>) session.getAttribute("listTourNN");
 	%>
 	<div id="container">
 		<div id="header">
 			<div id="login_loout">
+
+				<%
+					try {
+						us = (User) session.getAttribute("user");
+					} catch (Exception e) {
+						us = new User();
+					}
+				%>
+				<%
+					if (us == null) {
+				%>
 				<div id="DangKy">
-					<a href="#">Đăng Ký </a>
+					<a href="/DangKy">Đăng Ký </a>
 				</div>
 				<div id="DangNhap">
 					<a href="#"> Đăng Nhập </a>
 				</div>
+				<%
+					} else {
+				%>
+				<li class="dropdown">Xin Chào : <a class="dropdown-toggle"
+					data-toggle="dropdown" href="#"> <%=us.getUserName()%><span
+						class="caret"></span></a> </a>
+					<ul class="dropdown-menu">
+						<li><a href="DuLichTrongNuoc?newUrl=all">Thông Tin Cá
+								Nhân</a></li>
+						<li><a href="DuLichTrongNuoc?newUrl=123>"> Đăng Xuất</a></li>
+					</ul></li>
+				<%
+					}
+				%>
+
 				<div id="LienHe">
 					<a href="#">Liên Hệ </a>
 				</div>
@@ -55,7 +83,7 @@
 			<div id="banner">
 				<div id="logo">
 					<img
-						src="/NEWPROJECT/NEWPROJECT/img/logo/flower banner 1 - Copy.jpg" />
+						src="Resource?url=F:\GOC_HOC_TAP\2015-2016\LTW\img\logo\flower banner 1 - Copy.jpg" />
 				</div>
 				<div class="row">
 					<div class="col-lg-6">
@@ -102,7 +130,6 @@
 								<%
 									for (Tour_Type los : listTourTN) {
 										String param = los.getIdTourType();
-										
 								%>
 								<li><a href="DuLichTrongNuoc?newUrl=<%=param%>"> <%=los.getNameType()%>
 								</a></li>

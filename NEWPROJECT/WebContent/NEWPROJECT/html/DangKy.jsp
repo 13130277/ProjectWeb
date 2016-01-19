@@ -132,8 +132,6 @@
 						</label>
 					</div>
 				</div>
-
-
 				<button id="register-back-btn" type="button" style="color: #000"
 					class="btn btn-default">
 					<i class="glyphicon glyphicon-circle-arrow-left "></i> Trang chủ

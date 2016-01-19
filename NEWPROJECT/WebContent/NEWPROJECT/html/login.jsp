@@ -10,11 +10,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Du Lịch Và Cuộc Sống</title>
+<title>Đăng Nhập</title>
 <link
 	href="/NEWPROJECT/NEWPROJECT/Bootstrap/bootstrap/css/bootstrap.min.css"
 	rel="stylesheet" type="text/css" />
-	<link href="/NEWPROJECT/NEWPROJECT/Bootstrap/dist/css/admin.min.css" rel="stylesheet" type="text/css" />
+<link href="/NEWPROJECT/NEWPROJECT/Bootstrap/dist/css/admin.min.css"
+	rel="stylesheet" type="text/css" />
 <link href="/NEWPROJECT/NEWPROJECT/css/css.css" rel="stylesheet"
 	type="text/css" />
 <link
@@ -34,41 +35,72 @@
 
 </head>
 <body class="login-page">
-    <div class="login-box">
-      <div class="login-logo">
-        <h3><b style="color: White">Đăng Nhập Vào Tài Khoản Của Bạn</b></h3>
-      </div><!-- /.login-logo -->
-      <div class="login-box-body">
-        <form  method="post">
-          <div class="form-group has-feedback">
-          	<label for="email">Email: </label>
-            <input type="text" class="form-control"	name="email" />
-            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-          </div>
-          <div class="form-group has-feedback trasparent">
-          	<label for="password">Password: </label>
-            <input type="text" class="form-control"	name="pass" />
-            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-          </div>
-          <div class="row">
-            <div class="col-xs-8">      
-            </div><!-- /.col -->
-            <div class="col-xs-4">
-              <button type="submit" class="btn btn-primary btn-block btn-flat trasparent" style="color: #000">Sign In</button>
-            </div><!-- /.col -->
-            <p>&nbsp;</p>
-            
-    	<p style="margin-left: 20px;font-size: 18px">Quên Mật Khẩu</p>
-		<p style="margin-left: 20px">Click <a href="#" style="color: #099">vào đây </a>để lấy lại mật khẩu</p>
-        <p style="margin-left: 20px;border-top: 1px dotted #eee;padding-top: 20px;">Bạn chưa có tài khoản<a href="#" style="color: #099"> Tạo Tài Khoản </a></p>
-        <div style="float: right;" class="col-xs-4">
-              <button type="submit" class="btn btn-primary btn-block btn-flat trasparent" style="color: #000">Trang Chủ</button>
-            </div><!-- /.col -->
-         
-        </form>
-      </div><!-- /.login-box-body -->
-    </div><!-- /.login-box -->
-        
-        
-  </body>
+	<%
+		String email = (String) request.getAttribute("emailTrue");
+		String err_email = (String) request.getAttribute("email");
+		String err_pass = (String) request.getAttribute("pass");
+		if(email==null)
+			email = "";
+		if (err_email == null)
+			err_email = "";
+		if (err_pass == null)
+			err_pass = "";
+	%>
+	<div class="login-box">
+		<div class="login-logo">
+			<h3>
+				<b style="color: White">Đăng Nhập Vào Tài Khoản Của Bạn</b>
+			</h3>
+		</div>
+		<!-- /.login-logo -->
+		<div class="login-box-body" action="NEWPROJECT/ctrDangNhap">
+			<form method="post" action="/NEWPROJECT/ctrDangNhap">
+				<div class="form-group has-feedback">
+					<label for="email">Email: </label>
+					<input type="text" class="form-control" name="email" value="<%=email%>"/>
+						 <span	class="glyphicon glyphicon-envelope form-control-feedback"></span>
+						 <span><%=err_email%></span>
+				</div>
+				<div class="form-group has-feedback trasparent">
+					<label for="password">Password: </label> <input type="text" type="pass"
+						class="form-control" name="pass" /> 
+						<span class="glyphicon glyphicon-lock form-control-feedback"></span>
+						 <span><%=err_pass%></span>
+				</div>
+				<div class="row">
+					<div class="col-xs-8"></div>
+					<!-- /.col -->
+					<div class="col-xs-4">
+						<button type="submit"
+							class="btn btn-primary btn-block btn-flat trasparent"
+							style="color: #000">Sign In</button>
+					</div>
+					<!-- /.col -->
+					<p>&nbsp;</p>
+
+					<p style="margin-left: 20px; font-size: 18px">Quên Mật Khẩu</p>
+					<p style="margin-left: 20px">
+						Click <a href="#" style="color: #099">vào đây </a>để lấy lại mật khẩu
+					</p>
+					<p
+						style="margin-left: 20px; border-top: 1px dotted #eee; padding-top: 20px;">
+						Bạn chưa có tài khoản<a href="#" style="color: #099"> Tạo Tài
+							Khoản </a>
+					</p>
+					<div style="float: right;" class="col-xs-4">
+						<a href="NEWPROJECT/LoadDataHome"></a>
+						<button type="submit"
+							class="btn btn-primary btn-block btn-flat trasparent"
+							style="color: #000">Trang Chủ</button>
+						</a>
+					</div>
+					<!-- /.col -->
+			</form>
+		</div>
+		<!-- /.login-box-body -->
+	</div>
+	<!-- /.login-box -->
+
+
+</body>
 </html>

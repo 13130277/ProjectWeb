@@ -33,7 +33,8 @@
 	type="text/javascript"></script>
  <script type="text/javascript">
 	$(document).ready(function() {
-		$('#header').load("LoadDataHeader?id=123");
+		$('#header').load("LoadDataHeader");
+		
 	});
 </script>
 </head>
@@ -41,6 +42,7 @@
 	<%
 		ArrayList<Tour> listTour = (ArrayList<Tour>) session.getAttribute("allTour");
 	%>
+	
 	<div id="header"></div>
 	<div id="container">
 		<jsp:include page="seach.jsp"></jsp:include>

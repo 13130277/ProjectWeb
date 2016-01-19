@@ -8,15 +8,17 @@ public interface UserDao {
     public ArrayList<User> getAll(int limit, int offset);
  	public boolean deleteaCustomer(String idUser);
     public boolean deleteAllCustomer();
+    
     public boolean register( String fullName, String userName, String email,  String pass, String phone, String address);
 	public boolean checkRegister(String userName);
 	public boolean checkEmail(String Email);
-	public boolean checkLogin(User user) ;
+	public boolean checkLogin(String email, String pass) ;
 	public boolean changepass(String userName, String pass) ;
 	public boolean checkpass(String userName, String pass) ;
 	public boolean checkforgotpass(String user, String mail);
 	public String getpassforgot(String user, String mail);
 	public User getUserInfo(String idUsers);
+	public User getUser(String email);
 	public int countercustomer();
 
 }

@@ -68,7 +68,7 @@ public class UserDaoImp implements UserDao {
 
 	@Override
 	public boolean deleteAllCustomer() {
-		String sql = "DELETE FROM customer";
+		String sql = "DELETE FROM user";
 		Connection con = new ConnectionPool().getConnection();
 		boolean result = false;
 		try {
@@ -156,20 +156,19 @@ public class UserDaoImp implements UserDao {
 	}
 
 	@Override
-	public boolean checkLogin(User user) {
+	public boolean checkLogin(String email, String pass) {
 		String sql = "select * from user where userName = ? AND pass = ?";
 		boolean result = false;
 		Connection c = new ConnectionPool().getConnection();
 		try {
 			PreparedStatement sqll = c.prepareStatement(sql);
 
-			sqll.setString(1, user.getUserName());
-			sqll.setString(2, user.getPass());
+			sqll.setString(1, email);
+			sqll.setString(2, pass);
 			ResultSet rs = sqll.executeQuery();
 
 			while (rs.next() == true) {
 				result = true;
-
 				break;
 			}
 
@@ -204,14 +203,14 @@ public class UserDaoImp implements UserDao {
 	}
 
 	@Override
-	public boolean checkpass(String userName, String pass) {
-		String sql = "select * from user where userName = ? and pass = ?";
+	public boolean checkpass(String email, String pass) {
+		String sql = "select * from user where email = ? and pass = ?";
 		boolean result = false;
 		Connection con = new ConnectionPool().getConnection();
 		try {
 			PreparedStatement sqlcpa = con.prepareStatement(sql);
 
-			sqlcpa.setString(1, userName);
+			sqlcpa.setString(1, email);
 			sqlcpa.setString(2, pass);
 			ResultSet rs = sqlcpa.executeQuery();
 			while (rs.next()) {
@@ -337,7 +336,8 @@ public class UserDaoImp implements UserDao {
 
 	public static void main(String[] args) {
 		UserDaoImp daoImp = new UserDaoImp();
-		System.out.println(daoImp.checkRegister("Liên Ngọc"));
+//		System.out.println(daoImp.checkRegister("Liên Ngọc"));
+		System.out.println(daoImp.checkEmail("lientam110995@gmail.com"));
 //		System.out.println(daoImp.cutString());
 //		daoImp.register("Phan Thị Ngọc Tâm", "Liên Tâm", "lientam110995@gmail.com", "123456", "01672651508", "Linh Trung Thủ Đức");
 		// for (User user : daoImp.getAll(4, 0)) {
@@ -349,5 +349,30 @@ public class UserDaoImp implements UserDao {
 		// "Linh Trung 01");
 		// System.out.println(daoImp.getpassforgot("Minh Thư",
 		// "longnguyen110995@gmail.com"));
+	}
+
+	@Override
+	public User getUser(String email) {
+		String sql = "select * from user where email = ?";
+		Connection c = new ConnectionPool().getConnection();
+		User us = new User();
+		try {
+			PreparedStatement sqlui = c.prepareStatement(sql);
+			sqlui.setString(1, email);
+			ResultSet rs = sqlui.executeQuery();
+			if (rs.next()) {
+				us.setIdUser(rs.getString("idUser"));
+				us.setFullName(rs.getString("fullName"));
+				us.setUserName(rs.getString("userName"));
+				us.setEmail(rs.getString("email"));
+				us.setImg(rs.getString("img"));
+				us.setPhone(rs.getString("phone"));
+				us.setAddress(rs.getString("address"));
+			}
+			rs.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return us;
 	}
 }

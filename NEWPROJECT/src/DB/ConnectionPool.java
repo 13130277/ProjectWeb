@@ -6,7 +6,6 @@ public class ConnectionPool {
 	public Connection getConnection() {
 		Connection connection = null;
 			connection = ConnectionDB.getConnection();
-		
 		return connection;
 	}
 

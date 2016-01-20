@@ -5,8 +5,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+
+
 import DB.ConnectionDB;
 import Model.Tour_Type;
+
 public class TypeTourDaoImp implements TypeTourDao{
 
 	@Override

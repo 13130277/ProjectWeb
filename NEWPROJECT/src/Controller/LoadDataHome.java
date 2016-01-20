@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import DAO.TourDaoImp;
 import Model.Tour;
+import Model.User;
 
 /**
  * Servlet implementation class LoadDatahome
@@ -47,13 +48,10 @@ public class LoadDataHome extends HttpServlet {
 	}
 	private void loadData(HttpServletRequest request, HttpServletResponse response) throws  ServletException, IOException {
 		TourDaoImp tour = new TourDaoImp();
+//		User us = new User();
 		HttpSession session = request.getSession();
+//		session.setAttribute("user", us);
 		ArrayList<Tour> listTour = tour.getAllTour("Du Lịch Trong Nước");
-		ArrayList<Tour> nuocNgoai = tour.getAllTour("Du Lịch Nước Ngoài");
-		ArrayList<Tour> tourHot = tour.getTourHot(3, 0);
-		session.setAttribute("tourHot", tourHot);
-		session.setAttribute("tourTrongNuoc", listTour);
-		session.setAttribute("tourNuocNgoai",nuocNgoai);
 		session.setAttribute("allTour", listTour);
 		request.getRequestDispatcher("NEWPROJECT/html/home.jsp").forward(request, response);
 		

@@ -196,45 +196,5 @@ public class TourDaoImp implements TourDao {
 		}
 		return tour;
 	}
-
-	@Override
-	public ArrayList<Tour> getTourHot(int limit ,int offset ) {
-		String sql = "select * from tour limit ? offset ?";
-		ArrayList<Tour> listTour = new ArrayList<>();
-		try {
-			Connection con = ConnectionDB.getConnection();
-			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setInt(1, limit);
-			ps.setInt(2, offset);
-			ResultSet rs = ps.executeQuery();
-			while (rs.next()) {
-				Tour tour = new Tour();
-				tour.setIdTour(rs.getString("idTour"));
-				System.out.println(tour.getIdTour());
-				tour.setTourType(new Tour_Type(rs.getString("idTourType"), rs.getString("nameTourType"),
-						rs.getString("parent")));
-				tour.setImg(rs.getString("mainImg"));
-				System.out.println(tour.getTourType().toString());
-				tour.setNameTour(rs.getString("nameTour"));
-				tour.setDeparture(new Date(rs.getDate("departure").getTime()));
-				System.out.println(tour.getDeparture());
-				tour.setEnd(new Date(rs.getDate("end").getTime()));
-				System.out.println(tour.getEnd());
-				tour.setAmountDays(rs.getInt("amountDays"));
-				System.out.println(tour.getAmountDays());
-				tour.setOldPrice((rs.getInt("oldPrice")));
-				System.out.println(tour.getOldPrice());
-				tour.setNewPrice(rs.getInt("newPrice"));
-				System.out.println(tour.getNewPrice());
-				tour.setShortContent(rs.getString("shortContent"));
-				System.out.println(tour.getShortContent());
-				listTour.add(tour);
-			}
-			rs.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return listTour;
-	}
 	
 }

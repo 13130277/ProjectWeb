@@ -1,4 +1,3 @@
-activeuserprofiles=LIENTAM;Team
+activeuserprofiles=Dell;Team
 eclipse.preferences.version=1
-org.eclipse.rse.systemtype.local.systemType.defaultUserId=Tam
-useridperkey=LIENTAM.Local\=Tam;
+org.eclipse.rse.systemtype.local.systemType.defaultUserId=Microsoft

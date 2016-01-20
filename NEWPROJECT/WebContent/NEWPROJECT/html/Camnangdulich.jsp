@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+ <%@page import="Model.HandBook"%> 
+<%@page import="java.util.ArrayList"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/Camnangdulich.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
@@ -22,6 +24,7 @@
 </head>
 
 <body>
+<% ArrayList<HandBook> listHandBook = (ArrayList<HandBook>)session.getAttribute("listAllHandBook"); %>
 <div id="container">
 <%@include file="header.jsp" %>
  <%@include file="seach.jsp" %>

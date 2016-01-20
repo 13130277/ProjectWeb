@@ -52,7 +52,9 @@ public class LoadDataHome extends HttpServlet {
 		HttpSession session = request.getSession();
 //		session.setAttribute("user", us);
 		ArrayList<Tour> listTour = tour.getAllTour("Du Lịch Trong Nước");
-		session.setAttribute("allTour", listTour);
+		session.setAttribute("tourHot", listTour);
+		session.setAttribute("tourTrongNuoc", listTour);
+		session.setAttribute("tourNuocNgoai", listTour);
 		request.getRequestDispatcher("NEWPROJECT/html/home.jsp").forward(request, response);
 		
 	}

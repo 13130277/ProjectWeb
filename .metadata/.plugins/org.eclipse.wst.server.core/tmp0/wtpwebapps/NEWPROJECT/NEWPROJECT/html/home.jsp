@@ -34,18 +34,22 @@
  <script type="text/javascript">
 	$(document).ready(function() {
 		$('#header').load("LoadDataHeader");
+		
 	});
 </script>
 </head>
 <body>
 	<%
-		ArrayList<Tour> listTour = (ArrayList<Tour>) session.getAttribute("allTour");
+		ArrayList<Tour> listTourHot = (ArrayList<Tour>) session.getAttribute("tourHot");
+		ArrayList<Tour> listTourTN = (ArrayList<Tour>) session.getAttribute("tourTrongNuoc");
+		ArrayList<Tour> listTourNN = (ArrayList<Tour>) session.getAttribute("tourNuocNgoai");
 	%>
+	
 	<div id="header"></div>
 	<div id="container">
 		<jsp:include page="seach.jsp"></jsp:include>
 		<div class="tittle">
-			<a href="#"><div class="backgr">Tour Hot</div></a>
+			<div class="backgr">Tour Hot</div>
 		</div>
 		<div class="list">
 			<div class="row">
@@ -55,12 +59,12 @@
 							src="F:/GOC_HOC_TAP/2015-2016/LTW/infoTour/DuLichTrongNuoc/DaLat/Tour Đà Lạt 3 ngày 2 đêm đường hầm đất sét ĐÀ LẠT - Đường Hầm Đất Sét/pictures/bbi1420613859_tour-du-lich-da-lat-chinh-phuc-dinh-langbiang-3-ngay-2-dem.jpg" />
 						<div class="caption">
 							<h3>
-								<a href="#"><%=listTour.get(0).getNameTour()%></a>
+								<a href="#"><%=listTourHot.get(0).getNameTour()%></a>
 							</h3>
-							<p><%=listTour.get(0).getShortContent()%></p>
-							<span class="sell-price"> <%=listTour.get(0).getNewPrice()%> <sup>đ</sup></span>
+							<p><%=listTourHot.get(0).getShortContent()%></p>
+							<span class="sell-price"> <%=listTourHot.get(0).getNewPrice()%> <sup>đ</sup></span>
 							<span class="original-price"><del>
-									5.200.000 <sup>đ</sup>
+									<%= listTourHot.get(0).getNewPrice() %> <sup>đ</sup>
 								</del></span>
 							<p>
 								<a href="/NEWPROJECT/NEWPROJECT/html/datTour.jsp"
@@ -71,209 +75,80 @@
 						</div>
 					</div>
 				</div>
+					<%
+					for ( int i = 0; i < 3; i++){
+						Tour lot = listTourHot.get(i);
+						String list = lot.getIdTour();
+					
+				%>
 				<div class="col-xs-6 col-md-6 small">
 					<div class="thumbnail sml">
-						<img
-							src="F:/GOC_HOC_TAP/2015-2016/LTW/infoTour/DuLichTrongNuoc/NhaTrang/nhatrang.jpg" />
+						<img src="Resource?url=<%=lot.getImg() %>" />
 						<h4>
-							<a href="#">Du lịch Nha Trang </a>
+							<a href="DuLichTrongNuoc?newURL<%=list%>"><%lot.getNameTour(); %></a>
 						</h4>
-						<p>Miễn phí phụ thu trẻ dưới 6 tuổi ngủ cùng cha mẹ .</p>
-						<span class="sell-price"> 1.330.000 <sup>đ</sup></span> <span
+						<p><% lot.getShortContent(); %></p>
+						<span class="sell-price"> <% lot.getNewPrice(); %> <sup>đ</sup></span> <span
 							class="original-price"><del>
-								3.400.000 <sup>đ</sup>
+								<% lot.getOldPrice(); %> <sup>đ</sup>
 							</del></span>
 						<div class="pull-right">
 							<p>
-								<a href="#" class="btn btn-sm btn-primary" role="button">Đặt
-									mua</a> <a href="#" class="btn btn-sm btn-default" role="button">Xem
+								<a href="/NEWPROJECT/NEWPROJECT/html/datTour.jsp" class="btn btn-sm btn-primary" role="button">Đặt
+									mua</a> <a href="" class="btn btn-sm btn-default" role="button">Xem
 									Thêm</a>
 							</p>
 						</div>
 					</div>
-				</div>
-				<div class="col-xs-6 col-md-6 small">
-					<div class="thumbnail sml">
-						<img
-							src="F:/GOC_HOC_TAP/2015-2016/LTW/infoTour/DuLichTrongNuoc/HaNoi/HaNoiDongBac/hobabe.jpg" />
-						<h4>
-							<a href="#">Hà Nội - Đông Bắc </a>
-						</h4>
-						<p>Xe đưa Quý khách ra bến thuyền, đoàn lên thuyền tham quan
-							Hồ Ba Bể (5 tiếng)</p>
-						<span class="sell-price"> 1.330.000 <sup>đ</sup></span> <span
-							class="original-price"><del>
-								3.400.000 <sup>đ</sup>
-							</del></span>
-						<div class="pull-right">
-							<p>
-								<a href="#" class="btn btn-sm btn-primary" role="button">Đặt
-									mua</a> <a href="#" class="btn btn-sm btn-default" role="button">Xem
-									Thêm</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-6 col-md-6 small">
-					<div class="thumbnail sml">
-						<img
-							src="F:/GOC_HOC_TAP/2015-2016/LTW/infoTour/DuLichTrongNuoc/BenTre/BenTre-Mytho/eia1436420446_tour-du-lich-my-tho-ben-tre-can-tho-trong-2-ngay-1-dem.jpg" />
-						<h4>
-							<a href="#">Mỹ Tho - Bến Tre </a>
-						</h4>
-						<p>uý khách xuống đò chèo con rạch nhỏ để chiêm ngưỡng những
-							hàng dừa nước</p>
-						<span class="sell-price"> 2.000.000 <sup>đ</sup></span> <span
-							class="original-price"><del>
-								3.400.000 <sup>đ</sup>
-							</del></span>
-						<div class="pull-right">
-							<p>
-								<a href="#" class="btn btn-sm btn-primary" role="button">Đặt
-									mua</a> <a href="#" class="btn btn-sm btn-default" role="button">Xem
-									Thêm</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+				</div><% } %>
+							
 		<div class="tittle">
-			<a href="/NEWPROJECT/NEWPROJECT/html/Camnangdulich.jsp"><div
-					class="backgr">Du Lịch trong Nước</div></a>
+			<div class="backgr">Du Lịch trong Nước</div>
 		</div>
+		<%
+		for ( int i = 0; i < 6; i++){
+			Tour listTN = listTourTN.get(i);
+			String tourIn = listTN.getIdTour();
+
+		%>
 		<div class="list">
 			<div class="row">
 				<div class="col-sm-6 col-md-4" style="margin-left: 15px;">
 					<div class="thumbnail">
 						<img
-							src="F:/GOC_HOC_TAP/2015-2016/LTW/infoTour/DuLichTrongNuoc/BinhThuan/Bluebaymuine/bienphanthiet.jpg" />
+							src="Resource?url=<%= listTN.getImg() %>" />
 						<div class="caption">
 							<h3>
-								<a href="#"> Blue Bay Mũi Né Resort </a>
+								<a href="#"> <%listTN.getShortContent(); %> </a>
 							</h3>
-							<span class="sell-price">1,690,000 <sup>đ</sup></span> <span
+							<span class="sell-price"><%listTN.getNewPrice(); %><sup>đ</sup></span> <span
 								class="original-price"><del>
-									2,100,000 <sup>đ</sup>
+									<%listTN.getOldPrice(); %><sup>đ</sup>
 								</del></span>
 							<p>
-								<a href="#" class="btn btn-primary" role="button">Đặt mua</a> <a
+								<a href="/NEWPROJECT/NEWPROJECT/html/datTour.jsp" class="btn btn-primary" role="button">Đặt mua</a> <a
 									href="#" class="btn btn-default" role="button">Xem Thêm</a>
 							</p>
 						</div>
 					</div>
-				</div>
-				<div class="col-sm-6 col-md-4">
-					<div class="thumbnail">
-						<img
-							src="F:/GOC_HOC_TAP/2015-2016/LTW/infoTour/DuLichTrongNuoc/vungtau/langrungresort/174409-lan-rung-resort-2n1d-tang-lau-hai-san-xong-hoi.jpg" />
-						<div class="caption">
-							<h3>
-								<a href="#"> [Vũng Tàu] Lan Rừng Resort</a>
-							</h3>
-							<span class="sell-price"> 1,485,000 <sup>đ</sup></span> <span
-								class="original-price"><del>
-									2,296,000 <sup>đ</sup>
-								</del></span>
-							<p>
-								<a href="#" class="btn btn-primary" role="button">Đặt mua</a> <a
-									href="#" class="btn btn-default" role="button">Xem Thêm</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-4">
-					<div class="thumbnail">
-						<img
-							src="F:/GOC_HOC_TAP/2015-2016/LTW/infoTour/DuLichTrongNuoc/BacLieu/NhaThoChaDiep/noi-an-nghi-cua-cha-diep.jpg" />
-						<div class="caption">
-							<h3>
-								<a href="#"> [Bạc Liêu] Viếng Nhà Thờ Cha Diệp </a>
-							</h3>
-							<span class="sell-price"> 1.330.000 <sup>đ</sup></span> <span
-								class="original-price"><del>
-									3.400.000 <sup>đ</sup>
-								</del></span>
-							<p>
-								<a href="#" class="btn btn-primary" role="button">Đặt mua</a> <a
-									href="#" class="btn btn-default" role="button">Xem Thêm</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-4" style="margin-left: 15px;">
-					<div class="thumbnail img-responsive ">
-						<img height="300" itemprop="image" style="max-width: 100%;"
-							src="F:/GOC_HOC_TAP/2015-2016/LTW/infoTour/DuLichTrongNuoc/BinhThuan/BinhChauLaGi/lagi.jpg"
-							alt="" />
-						<div class="caption">
-							<h3>
-								<a href="#"> Tour Bình Châu – Lagi </a>
-							</h3>
-							<span class="sell-price">879,000 <sup>đ</sup></span> <span
-								class="original-price"><del>
-									1,590,000 <sup>đ</sup>
-								</del></span>
-							<p>
-								<a href="#" class="btn btn-primary" role="button">Đặt mua</a> <a
-									href="#" class="btn btn-default" role="button">Xem Thêm</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-4">
-					<div class="thumbnail img-responsive ">
-						<img height="300" itemprop="image" style="max-width: 100%;"
-							src="F:/GOC_HOC_TAP/2015-2016/LTW/infoTour/DuLichTrongNuoc/NhaTrangPhuYenQuyNhon/nhatrangphuyenquynhon.jpg"
-							alt="" />
-						<div class="caption">
-							<h3>
-								<a href="#">Quy Nhơn–Phú Yên–Nha Trang </a>
-							</h3>
-							<span class="sell-price">2,390,000 <sup>đ</sup></span> <span
-								class="original-price"><del>
-									4,390,000 <sup>đ</sup>
-								</del></span>
-							<p>
-								<a href="#" class="btn btn-primary" role="button">Đặt mua</a> <a
-									href="#" class="btn btn-default" role="button">Xem Thêm</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-4">
-					<div class="thumbnail img-responsive ">
-						<img height="300" itemprop="image" style="max-width: 100%;"
-							src="F:/GOC_HOC_TAP/2015-2016/LTW/infoTour/DuLichTrongNuoc/DaLat/thacPongour/thacpongour.jpg"
-							alt="" />
-						<div class="caption">
-							<h3>
-								<a href="#">Thác Pongour – Thác Voi </a>
-							</h3>
-							<span class="sell-price"> 330,000 <sup>đ</sup></span> <span
-								class="original-price"><del>
-									660,000 <sup>đ</sup>
-								</del></span>
-							<p>
-								<a href="#" class="btn btn-primary" role="button">Đặt mua</a> <a
-									href="#" class="btn btn-default" role="button">Xem Thêm</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+				</div><% } %>
+				
 		<div class="tittle">
 			<a href="/NEWPROJECT/NEWPROJECT/html/Camnangdulich.jsp">
 				<div class="backgr">Du Lịch Nước Ngoài</div>
 			</a>
 		</div>
+		<%
+			for(int i =0 ; i < 6;i++){
+				Tour listNN = listTourNN.get(i);
+				String tourOut = listNN.getIdTour();
+		%>
 		<div class="list">
 			<div class="row">
 				<div class="col-sm-6 col-md-4" style="margin-left: 15px;">
 					<div class="thumbnail">
 						<img
-							src="F:/GOC_HOC_TAP/2015-2016/LTW/infoTour/DuLichNuocNgoai/campuchia/campuchia.jpg" />
+							src="Resource?url=<%=listNN.getImg() %>" />
 						<div class="caption">
 							<h3>
 								<a href="#">Campuchia - Tour Cao Nguyên Bokor </a>
@@ -288,7 +163,7 @@
 							</p>
 						</div>
 					</div>
-				</div>
+				</div><% } %>
 				<div class="col-sm-6 col-md-4">
 					<div class="thumbnail">
 						<img

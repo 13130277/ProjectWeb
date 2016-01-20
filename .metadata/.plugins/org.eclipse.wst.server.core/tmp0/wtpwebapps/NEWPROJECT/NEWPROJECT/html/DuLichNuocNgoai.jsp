@@ -1,3 +1,5 @@
+<%@page import="Model.Tour"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -33,6 +35,7 @@
 </head>
 
 <body>
+<%ArrayList<Tour> listTour = (ArrayList<Tour>)session.getAttribute("listTourDuLichNuocNgoai"); %>
 <div id="header"></div>
 <div id="container">
   <div class="container">
@@ -45,18 +48,21 @@
   <!--start row-->
   <div class="row"> 
     <!--col-->
+    <% for(int i =0 ;i<6;i++){
+    	Tour tour = listTour.get(i);
+    %>
     <div class="col-xs-3 col-md-8">
-      <div class="thumbnail"  id="info1"> <img src="../img/tournuocngoai/great_wall_of_china.jpg" alt="..." />
+      <div class="thumbnail"  id="info1"> <img src="Resource?url=<%=tour.getImg() %>" />
         <div class="caption">
-          <h3>Du Lịch Trung Quốc</h3>
-          <p>Trung Quốc là chiếc nôi của nền văn hóa phương Đông nói chung và văn hóa Châu Á nói riêng</p>
+          <h3><%=tour.getNameTour() %></h3>
+          <p><%=tour.getShortContent() %></p>
           <p><a href="#" class="btn btn-primary" role="button">Đặt tour</a> 
           <a href="#" class="btn btn-default" role="button">Xem chi tiết</a></p>
         </div>
       </div>
     </div>
     <!--end col--> 
-    
+    <% } %>
     <!--col-->
     <div class="col-sm-6 col-md-4" >
       <div class="thumbnail"  id="info2"> <img src="../img/tournuocngoai/medium_wlw1421828538.jpg" alt="..." />

@@ -1,7 +1,9 @@
-<%@page import="Model.Tour"%>
-<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+   <%@page import="Model.Tour"%>
+      <%@page import="Model.Tour_Type"%>
+<%@page import="java.util.ArrayList"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/newTest.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
@@ -11,22 +13,6 @@
 <link href="/NEWPROJECT/NEWPROJECT/css/stylekid.css" rel="stylesheet" type="text/css" />
 <!-- InstanceEndEditable -->
 <link href="/NEWPROJECT/NEWPROJECT/Bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="/NEWPROJECT/NEWPROJECT/css/footer-distributed-with-address-and-phones.css">
-<link href="/NEWPROJECT/NEWPROJECT/Bootstrap/dist/css/font-awesome.min.css" rel="stylesheet" />
-<link href="/NEWPROJECT/NEWPROJECT/Bootstrap/glyphicons.css" rel="stylesheet" type="text/css" />
-<link href="/NEWPROJECT/NEWPROJECT/css/UpdateAddmin/stylenewaddmin.css" rel="stylesheet" />
-<script src="/NEWPROJECT/NEWPROJECT/Bootstrap/dist/js/jQuery-2.1.4.min.js"></script>
-<script src="/NEWPROJECT/NEWPROJECT/Bootstrap/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="/NEWPROJECT/NEWPROJECT/Bootstrap/dist/js/app.min.js" type="text/javascript"></script>
-<link href="/NEWPROJECT/NEWPROJECT/css/css.css" rel="stylesheet" type="text/css" />
-<link href="/NEWPROJECT/NEWPROJECT/SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css" />
-<script src="/NEWPROJECT/NEWPROJECT/SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
-<!-- Start WOWSlider.com HEAD section -->
-<link rel="stylesheet" type="text/css" href="/NEWPROJECT/NEWPROJECT/engine1/style.css" />
-<link href="/NEWPROJECT/NEWPROJECT/css/index/body_contenner.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="/NEWPROJECT/NEWPROJECT/engine1/jquery.js"></script>
-
-<!-- End WOWSlider.com HEAD section -->
 <script type="text/javascript">
 		$(document).ready(function() {
 			$('#header').load("LoadDataHeader");
@@ -35,7 +21,7 @@
 </head>
 
 <body>
-<%ArrayList<Tour> listTour = (ArrayList<Tour>)session.getAttribute("listTourDuLichTrongNuoc"); %>
+<%	List<Tour> listTour = (List<Tour>)session.getAttribute("listTourDuLichTrongNuoc") ;%>
 <div id="header"></div>
 <div id="container">
   <div class="container">
@@ -44,18 +30,20 @@
   <!--start row-->
   <div class="row"> 
     <!--col-->
-    <%Tour tour = listTour.get(2); %>
+    <%for(int i  = 1 ;i < 7;i++){
+    	//Tour tour = listTour.get(i);
+    %>
     <div class="col-xs-3 col-md-8">
-      <div class="thumbnail"  id="info1"> <img src="Resource?url=<%=tour.getImg() %>"
-      title="Du Lịch Đà Lạt" />
+      <div class="thumbnail"  id="info1"> 
+      <img src="Resource?url=<%=listTour.get(i).getImg() %>"/>
         <div class="caption">
-          <h3><%=tour.getNameTour() %></h3>
-          <p><%=tour.getShortContent() %></p>
+          <h3><%=listTour.get(i).getNameTour() %></h3>
+          <p><%=listTour.get(i).getShortContent() %></p>
           <p><a href="BookTour.jsp" class="btn btn-primary" role="button">Đặt tour</a>
            <a href="" class="btn btn-default" role="button">Xem chi tiết</a></p>
         </div>
       </div>
-    </div>
+    </div><%} %>
     <!--end col--> 
     
     <!--col-->

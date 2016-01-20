@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+  <%@page import="Model.Tour"%>
+  <%@page import="Model.Tour_Type"%> 
+   <%@page import="DAO.TourDaoImp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/home.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
@@ -21,7 +24,7 @@
 
 
 </head>
-
+<% Tour tour = (Tour)session.getAttribute("thongTinTour"); %>
 <body>
 <div id="container">
   <%@include file="header.jsp" %>
@@ -33,14 +36,13 @@
       <div class="col-xs-3 col-md-12">
         <div class="panel panel-default">
           <div class="panel-body" id="info1">
-            <p id="titledl">Tour Du Lịch Tham Quan Nội Thành Đà Lạt - City Tour Đà Lạt 1 Ngày</p>
-            <img src="../img/img-product/125144_Feature.jpg" alt="...">
+            <p id="titledl"><%= tour.getNameTour() %></p>
+            <img src="ReResource?url="<%=tour.getImg() %>>
             <div id="infoTour">
-              <p id="tgian"> <span>Thời gian: </span>1 ngày 1 đêm</p>
-              <p id="diadiem"><span>Khởi hành từ: </span>Hà Nội/Hồ Chí Minh</p>
-              <p id="ngaykh"><span>Ngày khởi hành: </span>22/12/1015</p>
-              <p id="giacu">Giá cũ: <span id="gachgiua">5.200.000 VNĐ</span></p>
-              <p id="giomoi"><span>Giá KM: </span>	3.700.000 VNĐ</p>
+              <p id="tgian"> <span>Thời gian: </span><%= tour.getAmountDays() %></p>
+              <p id="ngaykh"><span>Ngày khởi hành: </span><%= tour.getDeparture() %></p>
+              <p id="giacu">Giá cũ: <span id="gachgiua"><%=tour.getNewPrice() %></span></p>
+              <p id="giomoi"><span>Giá KM: </span>	<%= tour.getOldPrice() %></p>
              <a href="datTour.jsp"> <button type="button" class="btn btn-danger">Đặt Tour</button></a>
             </div>
           </div>

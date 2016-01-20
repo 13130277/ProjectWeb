@@ -1,6 +1,8 @@
 package Controller;
 
 import java.io.IOException;
+import java.util.TreeMap;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -60,8 +62,10 @@ public class DatHang extends HttpServlet {
 			String idTour = request.getParameter("idTour");
 			TourDaoImp daoImp = new TourDaoImp();
 			Tour tour = daoImp.getInfoTour(idTour);
+			TreeMap<Integer, Tour> card = new TreeMap<Integer, Tour>();
+			card.put(Integer.parseInt(idTour), tour);
+			request.setAttribute("card", card);
 			request.setAttribute("infoTour", tour);
-			
 		}
 	}
 	

@@ -16,13 +16,15 @@ public class Tour {
 	private double oldPrice;
 	private double newPrice;
 	private String shortContent;
+	private int adults;
+	
+	public int getAdults() {
+		return adults;
+	}
+	public void setAdults(int adults) {
+		this.adults = adults;
+	}
 	public Tour() {
-	}
-	public String getImg() {
-		return img;
-	}
-	public void setImg(String img) {
-		this.img = img;
 	}
 	public Tour(String idTour, Tour_Type tourType, String nameTour,String img, Date departure, Date end, int amountDays,
 			ArrayList<Content> content, double oldPrice, double newPrice, String shortContent) {
@@ -37,6 +39,13 @@ public class Tour {
 		this.oldPrice = oldPrice;
 		this.newPrice = newPrice;
 		this.shortContent = shortContent;
+		this.setAdults(1);
+	}
+	public String getImg() {
+		return img;
+	}
+	public void setImg(String img) {
+		this.img = img;
 	}
 	public String getIdTour() {
 		return idTour;
@@ -99,6 +108,7 @@ public class Tour {
 		this.shortContent = shortContent;
 	}
 	
-	
-	
+	public static void main(String[] args) {
+		
+	}
 }

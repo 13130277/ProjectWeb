@@ -55,7 +55,7 @@ public class DuLichTrongNuoc extends HttpServlet {
 		TourDaoImp tour = new TourDaoImp();
 		ArrayList<Tour> listTourDuLichTrongNuoc = new ArrayList<>();
 		String param = (String) request.getParameter("newUrl");
-		System.out.println(param+"tamtam------------");
+		System.out.println(param+" tamtam------------");
 		if (param.equals("all")) {
 			System.out.println("connect ...");
 			listTourDuLichTrongNuoc = tour.getAllTour("Du Lịch Trong Nước");

@@ -1,3 +1,5 @@
+<%@page import="java.util.Date"%>
+<%@page import="Model.Tour"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -48,6 +50,11 @@
 </head>
 
 <body>
+	<%
+// 		Tour tour = (Tour) request.getAttribute("infoTour");
+		Tour tour = new Tour("123",null,"Travel around VietNam","qwe.jpg",new Date(11,10,1999),new Date(11,11,1999),30, null,12000000,10000000,"Chao");
+		tour.setAdults(1);
+	%>
 	<div id="container">
 
 		<%@include file="seach.jsp"%>
@@ -85,27 +92,44 @@
 						</table>
 						<h3>Chi tiết đơn hàng</h3>
 						<table class="table table-responsive">
-							<tbody>
+							<thead>
 								<tr class="active">
 									<td>Tên Tour</td>
-									<td>Tổng</td>
+									<td>Số người</td>
+									<td style="text-align: center;">Ngày đi</td>
+									<td style="text-align: center;">Đơn giá</td>
+									<td colspan="2" style="text-align: center;">Thao tác</td>
 								</tr>
+							</thead>
+							<tbody>
 								<tr class="active">
-									<td class="product-name"><a href="TourPhanThiet.jsp">Tour
-											Du Lịch Tham Quan Nội Thành Đà Lạt - City Tour Đà Lạt 1 Ngày</a>
-										<strong class="product-quantity">× 1</strong>
-										<td class="product-total"><span class="amount">3.700.000&nbsp;₫</span></td>
-								</tr>
-								<tr class="active">
-									<td><strong>Ngày Đi : </strong></td>
-									<td>22/12/2015</td>
-								</tr>
-								<tr class="active">
-									<td><strong>Người Lớn : </strong></td>
-									<td>1</td>
-								</tr>
+									<td style="width: 40%" class="product-name"><a
+										href="TourPhanThiet.jsp"><%=tour.getNameTour()%></a>
+										<td style="text-align: right;"><strong
+											class="product-quantity">× <%=tour.getAdults() %></strong></td>
+										<td>19/01/2016</td> <!-- 										<td>2</td> -->
+										<td class="product-total"><span class="amount"><%=tour.getNewPrice()%>&nbsp;₫</span></td>
+										<td>
+											<form name="formupdate" method="post" action="updateProduct">
+												<input name="count" type="text" id="count"
+													style="width: 20px"> <input name="id" type="hidden"
+													value="<%=tour.getIdTour()%>"> <input type="submit"
+														value="Cập Nhật"
+														style="border-radius: 10px; background-color: #00ffcc; border-color: #00ffcc;">
+											</form>
+
+
+									</td>
+										<td>
+											<form name="formdel" method="post" action="delProduct">
+												<input name="id" type="hidden" value="<%=tour.getIdTour()%>"><input
+													type="submit" value="Xóa"
+													style="border-radius: 50%; background-color: #ccff00; border-color: #00ffcc;">
+											</form>
+
+									</td>
 							</tbody>
-							
+
 						</table>
 						<h3>Chi tiết khách hàng</h3>
 						</header>
@@ -131,8 +155,8 @@
 								<tr class="active">
 									<td>
 										<address>
-											Nguyễn Long<br> lienthanh<br> 10 linh Trung Thủ Duc
-													Hô Chi Minh<br> Hồ Chí Minh 
+											Nguyễn Long<br> lienthanh<br> 10 Linh Trung Thủ Đức
+													Hồ Chí Minh<br> Hồ Chí Minh 
 										</address>
 										<div class="clear"></div> </article>
 										<td>

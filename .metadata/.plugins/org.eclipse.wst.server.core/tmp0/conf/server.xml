@@ -126,7 +126,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log." suffix=".txt"/>
 
-      <Context docBase="F:\GOC_HOC_TAP\2015-2016\LTW\NEWPROJECT\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="F:\GOC_HOC_TAP\2015-2016\LTW\NEWPROJECT\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\NEWPROJECT" path="/NEWPROJECT" reloadable="true" source="org.eclipse.jst.jee.server:NEWPROJECT"/><Context docBase="F:\GOC_HOC_TAP\2015-2016\LTW\NEWPROJECT\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\NewTest" path="/NewTest" reloadable="true" source="org.eclipse.jst.jee.server:NewTest"/></Host>
+      <Context docBase="D:\LapTrinhJava\WebProjectNew\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\LapTrinhJava\WebProjectNew\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\NEWPROJECT" path="/NEWPROJECT" reloadable="true" source="org.eclipse.jst.jee.server:NEWPROJECT"/></Host>
     </Engine>
   </Service>
 </Server>

@@ -44,8 +44,8 @@
   <!--start row-->
   <div class="row"> 
     <!--col-->
-    <%for(Tour tour : listTour){
-    	 tour.getIdTour();
+    <%for(int i =0;i< 6;i++){
+    	 Tour tour = listTour.get(i);
     	%>
     }
     <div class="col-xs-3 col-md-8">

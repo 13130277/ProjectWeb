@@ -5,6 +5,7 @@
 <%@page import="Model.Tour"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page import="Model.User"%>
+<%@page import="DAO.TourDaoImp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <!-- InstanceBegin template="/Templates/home.dwt" codeOutsideHTMLIsLocked="false" -->
@@ -60,10 +61,10 @@
 							src="F:/GOC_HOC_TAP/2015-2016/LTW/infoTour/DuLichTrongNuoc/DaLat/Tour Đà Lạt 3 ngày 2 đêm đường hầm đất sét ĐÀ LẠT - Đường Hầm Đất Sét/pictures/bbi1420613859_tour-du-lich-da-lat-chinh-phuc-dinh-langbiang-3-ngay-2-dem.jpg" />
 						<div class="caption">
 							<h3>
-								<a href="#"><%//=listTourHot.get(0).getNameTour()%></a>
+								<a href="#"><%=listTourHot.get(0).getNameTour()%></a>
 							</h3>
-							<p><%//=listTourHot.get(0).getShortContent()%></p>
-							<span class="sell-price"> <%//=listTourHot.get(0).getNewPrice()%> <sup>đ</sup></span>
+							<p><%=listTourHot.get(0).getShortContent()%></p>
+							<span class="sell-price"> <%=listTourHot.get(0).getNewPrice()%> <sup>đ</sup></span>
 							<span class="original-price"><del>
 									5.200.000 <sup>đ</sup>
 								</del></span>
@@ -77,21 +78,21 @@
 					</div>
 				</div>
 				<%
-// 					for ( int i = 0; i < 3; i++){
-// 						Tour lot = listTourHot.get(i);
-// 						String list = lot.getIdTour();
+ 					for ( int i = 0; i < 3; i++){
+						Tour lot = listTourHot.get(i);
+ 						String list = lot.getIdTour();
 					
 				%>
 				<div class="col-xs-6 col-md-6 small">
 					<div class="thumbnail sml">
-						<img src="Resource?url=<%//=lot.getImg() %>" />
+						<img src="Resource?url=<%=lot.getImg() %>" />
 						<h4>
-							<a href="DuLichTrongNuoc?newURL<%//=list%>"><%//lot.getNameTour(); %></a>
+							<a href="DuLichTrongNuoc?newURL<%=list%>"><%=lot.getNameTour()%></a>
 						</h4>
-						<p><%// lot.getShortContent(); %></p>
-						<span class="sell-price"> <% //lot.getNewPrice(); %> <sup>đ</sup></span> <span
+						<p><%lot.getShortContent(); %></p>
+						<span class="sell-price"> <%=lot.getNewPrice() %> <sup>đ</sup></span> <span
 							class="original-price"><del>
-								<% lot.getOldPrice(); %> <sup>đ</sup>
+								<%= lot.getOldPrice() %> <sup>đ</sup>
 							</del></span>
 						<div class="pull-right">
 							<p>
@@ -101,15 +102,15 @@
 							</p>
 						</div>
 					</div>
-				</div><% } %>
+				</div><%} %>
 							
 		<div class="tittle">
 			<div class="backgr">Du Lịch trong Nước</div>
 		</div>
 		<%
-// 		for ( int i = 0; i < 6; i++){
-// 			Tour listTN = listTourTN.get(i);
-// 			String tourIn = listTN.getIdTour();
+		for ( int i = 0; i < 6; i++){
+			Tour listTN = listTourTN.get(i);
+ 			String tourIn = listTN.getIdTour();
 
 		%>
 		<div class="list">
@@ -117,14 +118,14 @@
 				<div class="col-sm-6 col-md-4" style="margin-left: 15px;">
 					<div class="thumbnail">
 						<img
-							src="Resource?url=<%//= listTN.getImg() %>" />
+							src="Resource?url=<%= listTN.getImg() %>" />
 						<div class="caption">
 							<h3>
-								<a href="#"> <%//listTN.getShortContent(); %> </a>
+								<a href="#"> <%=listTN.getShortContent() %> </a>
 							</h3>
-							<span class="sell-price"><%//listTN.getNewPrice(); %><sup>đ</sup></span> <span
+							<span class="sell-price"><%=listTN.getNewPrice() %><sup>đ</sup></span> <span
 								class="original-price"><del>
-									<%//listTN.getOldPrice(); %><sup>đ</sup>
+									<%=listTN.getOldPrice() %><sup>đ</sup>
 								</del></span>
 							<p>
 								<a href="/NEWPROJECT/NEWPROJECT/html/datTour.jsp" class="btn btn-primary" role="button">Đặt mua</a> <a
@@ -140,23 +141,23 @@
 			</a>
 		</div>
 		<%
-// 			for(int i =0 ; i < 6;i++){
-// 				Tour listNN = listTourNN.get(i);
-// 				String tourOut = listNN.getIdTour();
+ 			for(int i =0 ; i < 6;i++){
+ 				Tour listNN = listTourNN.get(i);
+ 				
 		%>
 		<div class="list">
 			<div class="row">
 				<div class="col-sm-6 col-md-4" style="margin-left: 15px;">
 					<div class="thumbnail">
 						<img
-							src="Resource?url=<%//=listNN.getImg() %>" />
+							src="Resource?url=<%=listNN.getImg() %>" />
 						<div class="caption">
 							<h3>
-								<a href="#">Campuchia - Tour Cao Nguyên Bokor </a>
+								<a href="#"><%= listNN.getShortContent() %> </a>
 							</h3>
-							<span class="sell-price">3,279,000 <sup>đ</sup></span> <span
+							<span class="sell-price"><%= listNN.getNewPrice() %><sup>đ</sup></span> <span
 								class="original-price"><del>
-									5,179,000 <sup>đ</sup>
+									<%=listNN.getOldPrice() %> <sup>đ</sup>
 								</del></span>
 							<p>
 								<a href="#" class="btn btn-primary" role="button">Đặt mua</a> <a
@@ -164,7 +165,7 @@
 							</p>
 						</div>
 					</div>
-				</div>
+				</div><%} %>
 					<!-- InstanceEndEditable -->
 		<%@include file="footer.jsp"%>
 

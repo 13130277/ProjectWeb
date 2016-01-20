@@ -1,3 +1,4 @@
+<%@page import="Model.HandBook"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -20,7 +21,7 @@
 <link href="/NEWPROJECT/NEWPROJECT/css/css.css" rel="stylesheet" type="text/css" />
 
 </head>
-
+<%ArrayList<HandBook> listBaiViet = (ArrayList<HandBook>) session.getAttribute("toulistTourDuLichNuocNgoai"); %>
 <body>
 <div id="container">
 <%@include file="header.jsp" %>
@@ -31,9 +32,11 @@
  	<div class="list">
     <div class="wap_location_right">
     	<ul class="filter">
-               <li><a class="image" href="DuLichDaLat.jsp"><img title="Đà Lạt tháng 7 - Ai đem mưa phùn qua phố?" alt="Đà Lạt tháng 7 - Ai đem mưa phùn qua phố?" src="../img/Camnangdulich/medium_ejz1446353394.jpg" /></a>
+                   <li><a class="image" href="DuLichDaLat.jsp"><img src="../img/Camnangdulich/medium_ejz1446353394.jpg" /></a>
             <h2><a title="Đà Lạt tháng 7 - Ai đem mưa phùn qua phố?" href="DuLichDaLat.jsp">Đà Lạt tháng 7 - Ai đem mưa phùn qua phố?</a></h2>
-           <div class="detail">Đà Lạt tháng 7 tựa những ngày mộng tưởng cho những ai lạc bước giữa chốn thanh sơ. Tháng 7 của Đà Lạt là tháng của những ngày không nắng, của gót chân người lữ khách tìm về phố mơ. Mytour muốn khẽ nâng đôi chân bạn trong một làn sương biếc, gởi bạn đến nơi của những thi ...</div>
+           <div class="detail">Đà Lạt tháng 7 tựa những ngày mộng tưởng cho những ai lạc bước giữa chốn thanh sơ. 
+           Tháng 7 của Đà Lạt là tháng của những ngày không nắng, của gót chân người lữ khách tìm về phố mơ. 
+           Mytour muốn khẽ nâng đôi chân bạn trong một làn sương biếc, gởi bạn đến nơi của những thi ...</div>
                <p class="view_more"><a href="DuLichDaLat.jsp">Xem thêm</a></p>
                
          </li>

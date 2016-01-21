@@ -1,0 +1,30 @@
+@charset "utf-8";
+.panel-default {
+	font-family: "Times New Roman", Times, serif;
+	width: 74%;
+	float: left;
+	clear: right;
+	margin-bottom: none;
+}
+.panel-default.box {
+	width: 23%;
+	float: left;
+	font-family: "Times New Roman", Times, serif;
+}
+
+
+.skin-green.sidebar-mini .content-wrapper .panel.panel-default .panel-body .row .table.table-bordered.table-striped thead tr th {
+text-align:center;
+}
+.skin-green.sidebar-mini .content-wrapper .panel.panel-default .panel-body .row .table.table-bordered.table-striped tbody tr td {
+
+	text-align:center;
+}
+.skin-green.sidebar-mini .content-wrapper .panel.panel-default .panel-body .row table tr th .select-all .checkbox {
+	clear: right;
+	float: left;
+	width: 20%;
+}
+.skin-green.sidebar-mini .content-wrapper .panel.panel-default .panel-body .row table tr th p .fa.fa-trash-o {
+	margin-right: 10px;
+}

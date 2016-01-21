@@ -1,0 +1,56 @@
+package DAO;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import DB.ConnectionDB;
+import Model.HandBook;
+
+public class HandBookImp implements HandBookDao {
+
+	@Override
+	public ArrayList<HandBook> getAllHandBook() {
+		String sql ="SELECT * FROM handbook";
+		ArrayList<HandBook> listAllHandBook = new ArrayList<>();
+		try {
+		Connection connection = ConnectionDB.getConnection();
+			PreparedStatement ps = connection.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+			HandBook handBook = new HandBook();
+			handBook.setTitle(rs.getString("title"));
+			handBook.setMainImg(rs.getString("id_img"));
+			handBook.setIdHandBook("idHandBook");
+			handBook.setShortContent(rs.getString("shortContent"));
+			listAllHandBook.add(handBook);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return listAllHandBook;
+	}
+
+	@Override
+	public HandBook getInfoHandBook(String idHandBook,String title,String id_img,String shortContent) {
+		String sql ="SELECT * FROM handbook WHERE idHandBook =?";
+		HandBook handBook = new HandBook();
+		try {
+		Connection connection = ConnectionDB.getConnection();
+			PreparedStatement ps = connection.prepareStatement(sql);
+			ps.setString(1, idHandBook);
+			ps.setString(2,title );
+			ps.setString(2,title );
+			ResultSet rs = ps.executeQuery();
+			TourDaoImp tImp = new TourDaoImp();
+			handBook.setContent(tImp.getListContent(rs.getString("idContent")));
+			handBook.setIdHandBook(rs.getString("idHandBook"));
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return handBook;
+	}
+
+}

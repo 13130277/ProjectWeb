@@ -1,0 +1,212 @@
+@charset "utf-8";
+#content #top #containt .title {
+	background-color: #3C3;
+	float: left;
+	height: 30px;
+	width: 100%;
+	margin-top: 10px;
+	clear: both;
+}
+
+#content #top #containt .input_text {
+	background-color: #36F;
+	float: left;
+	height: 30px;
+	width: 100%;
+	margin-top: 2px;
+	clear: both;
+}
+#content #top #containt #anh {
+	background-color: #636;
+	float: left;
+	height: 170px;
+	width: 100%;
+	margin-top: 10px;
+	clear: both;
+}
+#content #top #containt #right_themTour #buton {
+	background-color: #9CC;
+	text-align: center;
+	float: left;
+	height: 30px;
+	width: 30%;
+	margin-top: 10px;
+	margin-left: 120px;
+}
+
+#content #top #containt #lett_themTour {
+	clear: right;
+	float: left;
+	height: auto;
+	width: 45%;
+	margin-top: 50px;
+	margin-left: 50px;
+	background-color: #FFF;
+}
+#content #top #containt #right_themTour {
+	background-color: #FFF;
+	clear: right;
+	float: left;
+	height: auto;
+	width: 40%;
+	margin-top: 50px;
+	margin-left: 20px;
+}
+#content #top #tt_tour {
+	background-color: #F03;
+	clear: right;
+	float: left;
+	height: auto;
+	width: 87%;
+	margin-top: 5px;
+	margin-left: 50px;
+	margin-bottom: 5px;
+	padding: 3px;
+}
+#content #top #tt_tour .headertt_tour {
+	background-color: #999;
+	float: left;
+	height: 30px;
+	width: 100%;
+}
+#content #top #tt_tour .headertt_tour #checkbox {
+	clear: right;
+	float: left;
+	height: 100%;
+	width: 20px;
+	margin-left: 2px;
+	margin-top: 3px;
+}
+#content #top #tt_tour .headertt_tour a {
+	clear: right;
+	float: left;
+	height: 100%;
+	width: 20px;
+	margin-left: 10px;
+	margin-top: 3px;
+}
+#content #top #tt_tour .headertt_tour .img {
+	clear: none;
+	float: left;
+	height: 100%;
+	width: 30px;
+	margin-left: 10px;
+	margin-top: 3px;
+}
+
+
+
+
+#content #top #tt_tour .thongtin_tour {
+	float: left;
+	height: auto;
+	width: 100%;
+	border: thin solid #9C6;
+	padding: 3px;
+}
+#content #top #tt_tour .thongtin_tour a {
+	height: 15px;
+	width: 50px;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-bottom: 5px;
+}
+
+
+#content #top #tt_tour .thongtin_tour .title {
+	font-family: "Times New Roman", Times, serif;
+	text-align: left;
+	height: 30px;
+	width: 100%;
+	border: thin solid #3CC;
+	margin-top: 5px;
+}
+#content #top #tt_tour .thongtin_tour .info {
+	font-family: "Times New Roman", Times, serif;
+	text-align: left;
+	height: 200px;
+	width: 100%;
+	border: thin solid #3CC;
+	overflow: auto;
+	
+}
+#content #top #tt_tour .thongtin_tour .img {
+	text-align: left;
+	height: 150px;
+	width: 100%;
+	border: thin solid #3CC;
+	
+}
+#content #top #tt_tour #foodertt_tour {
+	float: left;
+	height: 40px;
+	width: 100%;
+	background-color: #CCC;
+}
+#content #top #tt_tour #foodertt_tour #checkbox {
+	clear: right;
+	float: left;
+	height: 100%;
+	width: 30px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+#content #top #tt_tour #foodertt_tour #text {
+	clear: right;
+	float: left;
+	height: 100%;
+	width: 180px;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+#content #top #tt_tour #foodertt_tour #imgadd {
+	clear: right;
+	float: left;
+	height: 80%;
+	width: 20px;
+	margin-left: 5px;
+	border: thin solid #999;
+	margin-top: 3px;
+}
+
+#content #top #tt_tour #foodertt_tour #imgdelete {
+	float: left;
+	height: 80%;
+	width: 25px;
+	margin-top: 2px;
+}
+#content #top #buttomslide {
+	float: left;
+	height: auto;
+	width: 87.5%;
+	margin-left: 50px;
+}
+#content #top #buttomslide a {
+	float: left;
+	height: 25px;
+	width: 100%;
+	margin-top: 5px;
+}
+
+
+#content #top .imgsilde {
+	clear: both;
+	float: left;
+	height: 150px;
+	width: 100%;
+	border: thin solid #9CC;
+}
+
+
+#content #top .imgsilde .slideimg {
+	background-color: #FFF;
+	clear: right;
+	float: left;
+	height: 150px;
+	width: 150px;
+	margin-right: 5px;
+}
+#content #top .imgsilde #addimg {
+	border: medium dashed #666;
+	height: 146px;
+}

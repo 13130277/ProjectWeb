@@ -1,0 +1,80 @@
+@charset "utf-8";
+body{
+	margin:0px 0px 0px 0px;
+	background-color: #E6F3CD;
+}
+#content {
+	background-color: #E6F3CD;
+	height: auto;
+	width: 100%;
+	float: left;
+}
+#content #header {
+	float: left;
+	height: 50px;
+	width: 100%;
+	background-color: #C00;
+	position: fixed;
+}
+#content #header #dangnhap {
+	background-color: #39C;
+	float: right;
+	height: 50px;
+	width: 200px;
+}
+
+#content #top {
+	float: right;
+	height: auto;
+	width: 75%;
+	overflow: auto;
+	margin-top: 50px;
+}
+#content #top #thongke {
+	float: left;
+	height: 120px;
+	width: 96%;
+	margin-left: 2%;
+	margin-top: 1%;
+}
+#content #top #thongke .thongke {
+	float: left;
+	height: 100%;
+	width: 30%;
+	margin-left: 5%;
+	background: #FFF;
+
+}
+
+#content #top #thongke .thongke img {
+	clear: both;
+	float: left;
+	height: 100%;
+	width: 50%;
+
+}
+#content #top #containt {
+	background-color: #96C;
+	clear: both;
+	float: left;
+	height: auto;
+	width: 100%;
+	overflow: auto;
+}
+#content #top #left {
+	width: 65%;
+	background-color: #9CF;
+	float: left;
+	height: auto;
+	margin-left: 20px;
+}
+
+#content #top #right {
+	background-color: #C96;
+	float: left;
+	height: auto;
+	width: 30%;
+	margin-left: 15px;
+	margin-top: 15px;
+}
+s

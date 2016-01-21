@@ -23,11 +23,14 @@
 <link rel="stylesheet" type="text/css" href="/NEWPROJECT/NEWPROJECT/engine1/style.css" />
 <link href="/NEWPROJECT/NEWPROJECT/css/index/body_contenner.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/NEWPROJECT/NEWPROJECT/engine1/jquery.js"></script>
-
-<!-- End WOWSlider.com HEAD section -->
-
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#header').load("LoadDataHeader");
+		
+	});
+</script>
 </head>
-
+<%  %>
 <body>
 <div id="container">
  <%@include file="header.jsp" %>

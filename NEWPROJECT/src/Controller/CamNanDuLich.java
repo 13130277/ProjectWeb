@@ -46,7 +46,7 @@ public class CamNanDuLich extends HttpServlet {
 		HandBookImp handBookImp = new HandBookImp();
 		ArrayList<HandBook> listAllHandBook = handBookImp.getAllHandBook();
 		HttpSession session = request.getSession();
-		session.setAttribute("listTourDuLichNuocNgoai", listAllHandBook);
-		request.getRequestDispatcher("/NEWPROJECT/html/CamNanDuLich.jsp").forward(request, response);
+		session.setAttribute("listAllHandBook", listAllHandBook);
+		request.getRequestDispatcher("/NEWPROJECT/html/Camnangdulich.jsp").forward(request, response);
 	}
 }

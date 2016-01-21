@@ -83,7 +83,7 @@
 			<div id="banner">
 				<div id="logo">
 					<img
-						src="Resource?url=F:\GOC_HOC_TAP\2015-2016\LTW\img\logo\flower banner 1 - Copy.jpg" />
+						src="Resource?url=D:\LapTrinhJava\WebImg\img\logo\flower banner 1 - Copy.jpg" />
 				</div>
 				<div class="row">
 					<div class="col-lg-6">

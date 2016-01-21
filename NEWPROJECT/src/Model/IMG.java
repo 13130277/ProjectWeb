@@ -3,7 +3,7 @@ package Model;
 public class IMG {
 	private String idImg;
 	private String address;
-	public String getIdImg() {
+	public String getIdImg(){
 		return idImg;
 	}
 	public void setIdImg(String idImg) {

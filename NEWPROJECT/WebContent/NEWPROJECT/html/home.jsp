@@ -56,7 +56,7 @@
 				<div class="col-sm-8 col-md-6">
 					<div class="thumbnail">
 						<img
-							src="F:/GOC_HOC_TAP/2015-2016/LTW/infoTour/DuLichTrongNuoc/DaLat/Tour Đà Lạt 3 ngày 2 đêm đường hầm đất sét ĐÀ LẠT - Đường Hầm Đất Sét/pictures/bbi1420613859_tour-du-lich-da-lat-chinh-phuc-dinh-langbiang-3-ngay-2-dem.jpg" />
+							src="D:\LapTrinhJava\WebImg\img\Camnangdulich\medium_tgy1446212990.jpg" />
 						<div class="caption">
 							<h3>
 								<a href="#"><%=listTourHot.get(0).getNameTour()%></a>

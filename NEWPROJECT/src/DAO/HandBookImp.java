@@ -22,7 +22,7 @@ public class HandBookImp implements HandBookDao {
 			while (rs.next()) {
 			HandBook handBook = new HandBook();
 			handBook.setTitle(rs.getString("title"));
-			handBook.setMainImg(rs.getString("mainImg"));
+			handBook.setMainImg(rs.getString("id_img"));
 			handBook.setIdHandBook("idHandBook");
 			handBook.setShortContent(rs.getString("shortContent"));
 			listAllHandBook.add(handBook);
@@ -40,7 +40,10 @@ public class HandBookImp implements HandBookDao {
 		try {
 		Connection connection = ConnectionDB.getConnection();
 			PreparedStatement ps = connection.prepareStatement(sql);
-			ps.setString(1, idHandBook);
+//			ps.setString(1, idHandBook);
+//			ps.setString(2,title);
+//			ps.setString(3,id_img);
+//			ps.setString(4,shortContent);
 			ResultSet rs = ps.executeQuery();
 			TourDaoImp tImp = new TourDaoImp();
 			handBook.setContent(tImp.getListContent(rs.getString("idContent")));

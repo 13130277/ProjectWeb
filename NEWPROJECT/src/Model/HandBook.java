@@ -7,7 +7,7 @@ String idHandBook;
 String title;
 ArrayList<Content> content;
 String shortContent;
-String mainImg;
+String id_img;
 public HandBook() {
 }
 public HandBook(String idHandBook, ArrayList<Content> content, String shortContent, String mainImg, String title) {
@@ -16,7 +16,7 @@ public HandBook(String idHandBook, ArrayList<Content> content, String shortConte
 	this.content = content;
 	this.shortContent = shortContent;
 	this.title = title;
-	this.mainImg = mainImg;
+	this.id_img = mainImg;
 }
 public String getTitle() {
 	return title;
@@ -25,10 +25,10 @@ public void setTitle(String title) {
 	this.title = title;
 }
 public String getMainImg() {
-	return mainImg;
+	return id_img;
 }
 public void setMainImg(String mainImg) {
-	this.mainImg = mainImg;
+	this.id_img = mainImg;
 }
 public String getIdHandBook() {
 	return idHandBook;

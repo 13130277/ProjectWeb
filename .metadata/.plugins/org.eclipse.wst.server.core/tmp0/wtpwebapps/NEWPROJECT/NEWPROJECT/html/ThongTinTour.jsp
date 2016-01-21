@@ -1,8 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+<<<<<<< HEAD
   <%@page import="Model.Tour"%>
   <%@page import="Model.Tour_Type"%> 
    <%@page import="DAO.TourDaoImp"%>
+=======
+<%@page import="Model.Tour"%>
+>>>>>>> a0d980a5e37ea795083aaf857548dbbe1018255d
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/home.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
@@ -24,7 +28,11 @@
 
 
 </head>
+<<<<<<< HEAD
 <% Tour tour = (Tour)session.getAttribute("thongTinTour"); %>
+=======
+<% Tour tour = (Tour) session.getAttribute("thongTinTour") ;%>
+>>>>>>> a0d980a5e37ea795083aaf857548dbbe1018255d
 <body>
 <div id="container">
   <%@include file="header.jsp" %>
@@ -36,6 +44,7 @@
       <div class="col-xs-3 col-md-12">
         <div class="panel panel-default">
           <div class="panel-body" id="info1">
+<<<<<<< HEAD
             <p id="titledl"><%= tour.getNameTour() %></p>
             <img src="ReResource?url="<%=tour.getImg() %>>
             <div id="infoTour">
@@ -43,6 +52,16 @@
               <p id="ngaykh"><span>Ngày khởi hành: </span><%= tour.getDeparture() %></p>
               <p id="giacu">Giá cũ: <span id="gachgiua"><%=tour.getNewPrice() %></span></p>
               <p id="giomoi"><span>Giá KM: </span>	<%= tour.getOldPrice() %></p>
+=======
+            <p id="titledl"><%tour.getNameTour(); %></p>
+            <img src= "Resource?url=<%=tour.getImg()%>" alt="...">
+            <div id="infoTour">
+              <p id="tgian"> <span>Thời gian: </span>1 ngày 1 đêm<%= tour.getAmountDays() %></p>
+              <p id="diadiem"><span>Mô tả : </span><%= tour.getShortContent() %> </p>
+              <p id="ngaykh"><span>Ngày khởi hành: </span><%= tour.getDeparture() %> </p>
+              <p id="giacu">Giá cũ: <span id="gachgiua"><%= tour.getNewPrice() %>VNĐ</span></p>
+              <p id="giomoi"><span>Giá KM: </span><%= tour.getOldPrice() %>Đ</p>
+>>>>>>> a0d980a5e37ea795083aaf857548dbbe1018255d
              <a href="datTour.jsp"> <button type="button" class="btn btn-danger">Đặt Tour</button></a>
             </div>
           </div>

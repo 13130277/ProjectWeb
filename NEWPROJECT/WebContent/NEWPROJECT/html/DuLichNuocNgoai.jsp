@@ -40,7 +40,7 @@
 <div id="container">
   <div class="container">
     
-
+<%ArrayList<Tour> listTour = (ArrayList<Tour>)session.getAttribute("listTourDuLichTrongNuoc"); %>
 <div class="tittle">
     <div class="backgr">Tour Du Lịch Nước Ngoài</div>
   </div>
@@ -48,6 +48,7 @@
   <!--start row-->
   <div class="row"> 
     <!--col-->
+<<<<<<< HEAD
     <% for(int i =0 ;i<6;i++){
     	Tour tour = listTour.get(i);
     %>
@@ -56,11 +57,20 @@
         <div class="caption">
           <h3><%=tour.getNameTour() %></h3>
           <p><%=tour.getShortContent() %></p>
+=======
+    <%for (int i= 0;i<6;i++) {
+    	 Tour tour = listTour.get(i);
+    %>
+    <div class="col-xs-3 col-md-8">
+      <div class="thumbnail"  id="info1"> <img src=" Resource?url=<%=tour.getImg()%>"/>
+          <h3><%=tour.getNameTour() %></h3>
+          <p><%= tour.getShortContent() %></p>
+>>>>>>> a0d980a5e37ea795083aaf857548dbbe1018255d
           <p><a href="#" class="btn btn-primary" role="button">Đặt tour</a> 
           <a href="#" class="btn btn-default" role="button">Xem chi tiết</a></p>
         </div>
       </div>
-    </div>
+    </div><%} %>
     <!--end col--> 
     <% } %>
     <!--col-->

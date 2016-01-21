@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <%@page import="Model.IMG"%>
+=======
+<%@page import="Model.HandBook"%>
+>>>>>>> a0d980a5e37ea795083aaf857548dbbe1018255d
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
  <%@page import="Model.HandBook"%> 
@@ -28,7 +32,7 @@
 	});
 </script>
 </head>
-
+<%ArrayList<HandBook> listBaiViet = (ArrayList<HandBook>) session.getAttribute("toulistTourDuLichNuocNgoai"); %>
 <body>
 <% ArrayList<HandBook> listHandBook = (ArrayList<HandBook>)session.getAttribute("listAllHandBook"); %>
 <div id="header"></div>
@@ -40,6 +44,7 @@
  	<div class="list">
     <div class="wap_location_right">
     	<ul class="filter">
+<<<<<<< HEAD
     	<%for (HandBook list : listHandBook){
     		list.getIdHandBook();
     	%>
@@ -47,6 +52,13 @@
     	<img title="<%= list.getTitle() %>" src="Resource?url=<%=list.getMainImg()%>" /></a>
             <h2><a href="DuLichDaLat.jsp"><%= list.getTitle() %></a></h2>
            <div class="detail"><%= list.getShortContent() %></div>
+=======
+                   <li><a class="image" href="DuLichDaLat.jsp"><img src="../img/Camnangdulich/medium_ejz1446353394.jpg" /></a>
+            <h2><a title="Đà Lạt tháng 7 - Ai đem mưa phùn qua phố?" href="DuLichDaLat.jsp">Đà Lạt tháng 7 - Ai đem mưa phùn qua phố?</a></h2>
+           <div class="detail">Đà Lạt tháng 7 tựa những ngày mộng tưởng cho những ai lạc bước giữa chốn thanh sơ. 
+           Tháng 7 của Đà Lạt là tháng của những ngày không nắng, của gót chân người lữ khách tìm về phố mơ. 
+           Mytour muốn khẽ nâng đôi chân bạn trong một làn sương biếc, gởi bạn đến nơi của những thi ...</div>
+>>>>>>> a0d980a5e37ea795083aaf857548dbbe1018255d
                <p class="view_more"><a href="DuLichDaLat.jsp">Xem thêm</a></p>
                
          </li>

@@ -5,6 +5,7 @@
 <%@page import="Model.Tour"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page import="Model.User"%>
+<%@page import="DAO.TourDaoImp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <!-- InstanceBegin template="/Templates/home.dwt" codeOutsideHTMLIsLocked="false" -->
@@ -40,13 +41,20 @@
 </head>
 <body>
 	<%
+<<<<<<< HEAD
 		ArrayList<Tour> listTourHot = (ArrayList<Tour>) session.getAttribute("tourHot");
 		ArrayList<Tour> listTourTN = (ArrayList<Tour>) session.getAttribute("tourTrongNuoc");
 		ArrayList<Tour> listTourNN = (ArrayList<Tour>) session.getAttribute("tourNuocNgoai");
+=======
+ 	ArrayList<Tour> listTourHot = (ArrayList<Tour>) session.getAttribute("tourHot");
+ 	ArrayList<Tour> listTourTN = (ArrayList<Tour>) session.getAttribute("tourTrongNuoc");
+ 	ArrayList<Tour> listTourNN = (ArrayList<Tour>) session.getAttribute("tourNuocNgoai");
+>>>>>>> a0d980a5e37ea795083aaf857548dbbe1018255d
 	%>
 	
 	<div id="header"></div>
 	<div id="container">
+			<jsp:include page="header.jsp"></jsp:include>
 		<jsp:include page="seach.jsp"></jsp:include>
 		<div class="tittle">
 			<div class="backgr">Tour Hot</div>
@@ -75,22 +83,38 @@
 						</div>
 					</div>
 				</div>
+<<<<<<< HEAD
 					<%
 					for ( int i = 0; i < 3; i++){
 						Tour lot = listTourHot.get(i);
 						String list = lot.getIdTour();
+=======
+				<%
+ 					for ( int i = 0; i < 3; i++){
+						Tour lot = listTourHot.get(i);
+ 						String list = lot.getIdTour();
+>>>>>>> a0d980a5e37ea795083aaf857548dbbe1018255d
 					
 				%>
 				<div class="col-xs-6 col-md-6 small">
 					<div class="thumbnail sml">
 						<img src="Resource?url=<%=lot.getImg() %>" />
 						<h4>
+<<<<<<< HEAD
 							<a href="DuLichTrongNuoc?newURL<%=list%>"><%lot.getNameTour(); %></a>
 						</h4>
 						<p><% lot.getShortContent(); %></p>
 						<span class="sell-price"> <% lot.getNewPrice(); %> <sup>đ</sup></span> <span
 							class="original-price"><del>
 								<% lot.getOldPrice(); %> <sup>đ</sup>
+=======
+							<a href="DuLichTrongNuoc?newURL<%=list%>"><%=lot.getNameTour()%></a>
+						</h4>
+						<p><%lot.getShortContent(); %></p>
+						<span class="sell-price"> <%=lot.getNewPrice() %> <sup>đ</sup></span> <span
+							class="original-price"><del>
+								<%= lot.getOldPrice() %> <sup>đ</sup>
+>>>>>>> a0d980a5e37ea795083aaf857548dbbe1018255d
 							</del></span>
 						<div class="pull-right">
 							<p>
@@ -100,7 +124,11 @@
 							</p>
 						</div>
 					</div>
+<<<<<<< HEAD
 				</div><% } %>
+=======
+				</div><%} %>
+>>>>>>> a0d980a5e37ea795083aaf857548dbbe1018255d
 							
 		<div class="tittle">
 			<div class="backgr">Du Lịch trong Nước</div>
@@ -108,7 +136,11 @@
 		<%
 		for ( int i = 0; i < 6; i++){
 			Tour listTN = listTourTN.get(i);
+<<<<<<< HEAD
 			String tourIn = listTN.getIdTour();
+=======
+ 			String tourIn = listTN.getIdTour();
+>>>>>>> a0d980a5e37ea795083aaf857548dbbe1018255d
 
 		%>
 		<div class="list">
@@ -119,11 +151,19 @@
 							src="Resource?url=<%= listTN.getImg() %>" />
 						<div class="caption">
 							<h3>
+<<<<<<< HEAD
 								<a href="#"> <%listTN.getShortContent(); %> </a>
 							</h3>
 							<span class="sell-price"><%listTN.getNewPrice(); %><sup>đ</sup></span> <span
 								class="original-price"><del>
 									<%listTN.getOldPrice(); %><sup>đ</sup>
+=======
+								<a href="#"> <%=listTN.getShortContent() %> </a>
+							</h3>
+							<span class="sell-price"><%=listTN.getNewPrice() %><sup>đ</sup></span> <span
+								class="original-price"><del>
+									<%=listTN.getOldPrice() %><sup>đ</sup>
+>>>>>>> a0d980a5e37ea795083aaf857548dbbe1018255d
 								</del></span>
 							<p>
 								<a href="/NEWPROJECT/NEWPROJECT/html/datTour.jsp" class="btn btn-primary" role="button">Đặt mua</a> <a
@@ -139,9 +179,15 @@
 			</a>
 		</div>
 		<%
+<<<<<<< HEAD
 			for(int i =0 ; i < 6;i++){
 				Tour listNN = listTourNN.get(i);
 				String tourOut = listNN.getIdTour();
+=======
+ 			for(int i =0 ; i < 6;i++){
+ 				Tour listNN = listTourNN.get(i);
+ 				
+>>>>>>> a0d980a5e37ea795083aaf857548dbbe1018255d
 		%>
 		<div class="list">
 			<div class="row">
@@ -149,6 +195,7 @@
 					<div class="thumbnail">
 						<img
 							src="Resource?url=<%=listNN.getImg() %>" />
+<<<<<<< HEAD
 						<div class="caption">
 							<h3>
 								<a href="#">Campuchia - Tour Cao Nguyên Bokor </a>
@@ -168,13 +215,15 @@
 					<div class="thumbnail">
 						<img
 							src="F:/GOC_HOC_TAP/2015-2016/LTW/infoTour/DuLichNuocNgoai/campuchia/Tour Siemriep - Phnompenh/208647-black-friday-cambodia-siemriep-phnompenh-4n3d-danh-cho-01-nguoi.jpg" />
+=======
+>>>>>>> a0d980a5e37ea795083aaf857548dbbe1018255d
 						<div class="caption">
 							<h3>
-								<a href="#"> Tour Siemriep - Phnompenh </a>
+								<a href="#"><%= listNN.getShortContent() %> </a>
 							</h3>
-							<span class="sell-price"> 3,500,000 <sup>đ</sup></span> <span
+							<span class="sell-price"><%= listNN.getNewPrice() %><sup>đ</sup></span> <span
 								class="original-price"><del>
-									3,900,000 <sup>đ</sup>
+									<%=listNN.getOldPrice() %> <sup>đ</sup>
 								</del></span>
 							<p>
 								<a href="#" class="btn btn-primary" role="button">Đặt mua</a> <a
@@ -182,89 +231,8 @@
 							</p>
 						</div>
 					</div>
-				</div>
-				<div class="col-sm-6 col-md-4">
-					<div class="thumbnail">
-						<img
-							src="F:/GOC_HOC_TAP/2015-2016/LTW/infoTour/DuLichNuocNgoai/thailan/bangkok-pataya/208639-black-friday-thailand-tour-bangkok-pataya-5n4d-danh-cho-01-nguoi.jpg" />
-						<div class="caption">
-							<h3>
-								<a href="#"> Tour Bangkok - Pataya</a>
-							</h3>
-							<span class="sell-price"> 5,500,000 <sup>đ</sup></span> <span
-								class="original-price"><del>
-									5,890,000 <sup>đ</sup>
-								</del></span>
-							<p>
-								<a href="#" class="btn btn-primary" role="button">Đặt mua</a> <a
-									href="#" class="btn btn-default" role="button">Xem Thêm</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-4" style="margin-left: 15px;">
-					<div class="thumbnail img-responsive ">
-						<img height="300" itemprop="image" style="max-width: 100%;"
-							src="F:/GOC_HOC_TAP/2015-2016/LTW/infoTour/DuLichNuocNgoai/campuchia/thienduongbiendao/97485_body (3).jpg"
-							alt="" />
-						<div class="caption">
-							<h3>
-								<a href="#"> Campuchia Thiên Đường Biển Đảo </a>
-							</h3>
-							<span class="sell-price"> 3,400,000 <sup>đ</sup></span> <span
-								class="original-price"><del>
-									4,900,000 <sup>đ</sup>
-								</del></span>
-							<p>
-								<a href="#" class="btn btn-primary" role="button">Đặt mua</a> <a
-									href="#" class="btn btn-default" role="button">Xem Thêm</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-4">
-					<div class="thumbnail img-responsive ">
-						<img height="300" itemprop="image" style="max-width: 100%;"
-							src="F:/GOC_HOC_TAP/2015-2016/LTW/infoTour/DuLichNuocNgoai/campuchia/sỉmiephuyenbi/168398-tour-kham-pha-siem-riep-huyen-bi-phnompenh-cao-nguyen-bokor-sihanoukville-dao-thien-duong-kohrong-ks-3-5-6n5d-danh-cho-1-khach.jpg"
-							alt="" />
-						<div class="caption">
-							<h3>
-								<a href="#"> Siêm Riệp – Phnompenh </a>
-							</h3>
-							<span class="sell-price"> 1.330.000 <sup>đ</sup></span> <span
-								class="original-price"><del>
-									3.400.000 <sup>đ</sup>
-								</del></span>
-							<p>
-								<a href="#" class="btn btn-primary" role="button">Đặt mua</a> <a
-									href="#" class="btn btn-default" role="button">Xem Thêm</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6 col-md-4">
-					<div class="thumbnail img-responsive ">
-						<img height="300" itemprop="image" style="max-width: 100%;"
-							src="F:/GOC_HOC_TAP/2015-2016/LTW/infoTour/DuLichNuocNgoai/campuchia/giaimasiemriep/193078-campuchia-4n3d-giai-ma-siemriep-huyen-bi-phnompenh-danh-cho-1-nguoi.jpg"
-							alt="" />
-						<div class="caption">
-							<h3>
-								<a href="#"> Tour Giải Mã Siemriep Huyền Bí</a>
-							</h3>
-							<span class="sell-price"> 2,990,000 <sup>đ</sup></span> <span
-								class="original-price"><del>
-									4,800,000 <sup>đ</sup>
-								</del></span>
-							<p>
-								<a href="#" class="btn btn-primary" role="button">Đặt mua</a> <a
-									href="#" class="btn btn-default" role="button">Xem Thêm</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- InstanceEndEditable -->
+				</div><%} %>
+					<!-- InstanceEndEditable -->
 		<%@include file="footer.jsp"%>
 
 	</div>

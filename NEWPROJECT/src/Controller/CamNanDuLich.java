@@ -1,6 +1,6 @@
 package Controller;
 
-import java.io.IOException;
+import java.io.IOException; 
 import java.util.ArrayList;
 
 import javax.servlet.ServletException;
@@ -46,7 +46,12 @@ public class CamNanDuLich extends HttpServlet {
 		HandBookImp handBookImp = new HandBookImp();
 		ArrayList<HandBook> listAllHandBook = handBookImp.getAllHandBook();
 		HttpSession session = request.getSession();
+<<<<<<< HEAD
 		session.setAttribute("listAllHandBook", listAllHandBook);
 		request.getRequestDispatcher("/NEWPROJECT/html/Camnangdulich.jsp").forward(request, response);
+=======
+		session.setAttribute("listTourDuLichNuocNgoai", listAllHandBook);
+		request.getRequestDispatcher("/NEWPROJECT/html/CamNangDuLich.jsp").forward(request, response);
+>>>>>>> a0d980a5e37ea795083aaf857548dbbe1018255d
 	}
 }

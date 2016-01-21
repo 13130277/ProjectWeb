@@ -10,7 +10,7 @@ public class ConnectionDB {
 	public ConnectionDB() {
 	}
 
-	public static   ConnectionDB getInstance() {
+	public static ConnectionDB getInstance() {
 		if (instance==null)
 			instance = new ConnectionDB();
 		return instance;
@@ -19,7 +19,12 @@ public class ConnectionDB {
 	public static boolean openConnection (){
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
+<<<<<<< HEAD
 			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/project?useUnicode=true&characterEncoding=utf-8","root","");
+=======
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/project?setUnicode=true&characterEncoding=UTF-8", "root", "");
+			
+>>>>>>> a0d980a5e37ea795083aaf857548dbbe1018255d
 		} catch (SQLException e) {
 			System.err.println(e);
 			e.printStackTrace();
@@ -51,7 +56,11 @@ public class ConnectionDB {
 		}
 	}
 	public static void main(String[] args) {
+<<<<<<< HEAD
 		System.out.println(getConnection());
+=======
+//	System.out.println(ConnectionDB.getConnection());
+>>>>>>> a0d980a5e37ea795083aaf857548dbbe1018255d
 	}
 
 }

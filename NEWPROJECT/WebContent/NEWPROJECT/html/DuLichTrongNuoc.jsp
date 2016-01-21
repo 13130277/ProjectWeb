@@ -25,20 +25,32 @@
 <div id="header"></div>
 <div id="container">
   <div class="container">
-  <div id="tittle1"></div>
+  <div id="tittle1">Du Lịch Trong Nước</div>
   <div id="list1">
   <!--start row-->
   <div class="row"> 
     <!--col-->
+<<<<<<< HEAD
     <%for(int i  = 1 ;i < 7;i++){
     	//Tour tour = listTour.get(i);
     %>
+=======
+    <%for(int i =0;i< 6;i++){
+    	 Tour tour = listTour.get(i);
+    	%>
+    }
+>>>>>>> a0d980a5e37ea795083aaf857548dbbe1018255d
     <div class="col-xs-3 col-md-8">
       <div class="thumbnail"  id="info1"> 
       <img src="Resource?url=<%=listTour.get(i).getImg() %>"/>
         <div class="caption">
+<<<<<<< HEAD
           <h3><%=listTour.get(i).getNameTour() %></h3>
           <p><%=listTour.get(i).getShortContent() %></p>
+=======
+          <h3><%=tour.getNameTour() %></h3>
+          <p><%= tour.getShortContent() %></p>
+>>>>>>> a0d980a5e37ea795083aaf857548dbbe1018255d
           <p><a href="BookTour.jsp" class="btn btn-primary" role="button">Đặt tour</a>
            <a href="" class="btn btn-default" role="button">Xem chi tiết</a></p>
         </div>

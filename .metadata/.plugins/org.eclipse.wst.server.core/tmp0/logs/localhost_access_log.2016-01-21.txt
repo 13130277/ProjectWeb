@@ -327,3 +327,4 @@
 0:0:0:0:0:0:0:1 - - [21/Jan/2016:10:07:03 +0700] "GET /NEWPROJECT/Resource?url=D:\LapTrinhJava\WebImg\img\Camnangdulich\medium_tgy1446212990.jpg HTTP/1.1" 200 49703
 0:0:0:0:0:0:0:1 - - [21/Jan/2016:10:07:03 +0700] "GET /NEWPROJECT/Resource?url= HTTP/1.1" 500 1626
 0:0:0:0:0:0:0:1 - - [21/Jan/2016:10:07:03 +0700] "GET /NEWPROJECT/Resource?url=F:\GOC_HOC_TAP\2015-2016\LTW\infoTour\DuLichTrongNuoc\DaLat\DoiHoaMatTroi\01.jpg HTTP/1.1" 500 1944
+127.0.0.1 - - [21/Jan/2016:10:25:38 +0700] "GET / HTTP/1.1" 404 951

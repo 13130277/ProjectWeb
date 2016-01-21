@@ -1,3 +1,4 @@
+<%@page import="java.io.PrintWriter"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -39,25 +40,24 @@
         <form>
           <div class="form-group">
             <label for="text">Họ Tên : <span style="color:#F00;">*</span></label>
-            <input type="text" class="form-control" id="text" placeholder="Họ Và Tên"/>
+            <input type="text" class="form-control" id="text" placeholder="Họ Và Tên" name="hoten"/>
           </div>
           <div class="form-group">
             <label for="text">Số Điện Thoại : <span style="color:#F00;">*</span> </label>
-            <input type="text" class="form-control" id="text" placeholder="Số Điện Thoại"/>
+            <input type="text" class="form-control" id="text" placeholder="Số Điện Thoại" name="sdt"/>
           </div>
           <div class="form-group">
             <label for="inputEmail"> Email : <span style="color:#F00;">*</span> </label>
-            <input type="email" class="form-control" id="inputEmail" placeholder="Email"/>
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email" name="email"/>
           </div>
           <div class="form-group">
             <label for="text"> Địa chỉ : </label>
-            <input type="text" class="form-control" id="text" placeholder="Địa chỉ"/>
+            <input type="text" class="form-control" id="text" placeholder="Địa chỉ" NAME="diachi"/>
           </div>
         </form>
       </div>
     </div>
   </div>
-  
   <!--end row-->
   
   <div class="panel panel-default sc">
@@ -114,7 +114,7 @@
   
   <div class="panel panel-default th">
     <div class="panel-heading thhead">Gửi yêu cầu đặt tour</div>
-    <div class="panel-body thbody"> <a href="thongtindattour.jsp" class="btn btn-primary btn-block margin-bottom">Hoàn Thành</a>
+    <div class="panel-body thbody"> <a href="thongtindattour.jsp?" class="btn btn-primary btn-block margin-bottom" >Hoàn Thành</a>
       <div class=" boxnoti note_info_contact"> <b class="title_note" style="color:#F00 ;font-size:20px;">Lưu ý:</b>
         <ul>
           <li> Quý khách có thể thanh toán trước bằng thẻ <a href="#"> tại đây. </a> </li>
